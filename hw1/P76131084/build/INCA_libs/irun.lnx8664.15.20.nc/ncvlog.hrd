@@ -1,0 +1,20 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-INCDIR
+/home/LiauYiShang/VLSI2024/hw1/P76131084/./src
+-INCDIR
+/home/LiauYiShang/VLSI2024/hw1/P76131084/./src/AXI
+-INCDIR
+/home/LiauYiShang/VLSI2024/hw1/P76131084/./include
+-INCDIR
+/home/LiauYiShang/VLSI2024/hw1/P76131084/./sim
+-DEFINE
+prog0
+-DEFINE
+FSDB_ALL
+-DEFINE
+CYCLE=10.0
+-DEFINE
+MAX=100000

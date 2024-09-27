@@ -1,0 +1,339 @@
+Warning: The trip points for the library named SRAM_ss0p72v0p72vm40c_100a differ from those in the library named N16ADFP_StdCellss0p72vm40c. (TIM-164)
+Information: Updating design information... (UID-85)
+Warning: Design 'top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : top
+Version: O-2018.06
+Date   : Fri Sep 27 18:06:21 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss0p72vm40c   Library: N16ADFP_StdCellss0p72vm40c
+Wire Load Model Mode: segmented
+
+  Startpoint: cpu/EXE_state/WBadr_EXE_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cpu/EXE_state/result_EXE_reg_22_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ProgramCounter     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  MEM_state          ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  EXE_state          ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ID_state           ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  IF_state           ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  top                ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  CPU                ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ALU_DW01_cmp6_0    ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ALU_DW01_add_0     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ALU_DW01_sub_0     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ALU_DW_mult_uns_0  ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ALU_DW_mult_tc_1   ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ALU_DW_mult_tc_0   ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ALU                ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  floatALU           ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  floatALU_DW01_sub_3
+                     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  floatALU_DW01_sub_2
+                     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  floatALU_DW_cmp_1  ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  floatALU_DW01_add_0
+                     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  floatALU_DW01_sub_1
+                     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  floatALU_DW01_sub_0
+                     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  count_leading_zero ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  count_leading_zero_DW01_sub_0
+                     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  count_leading_zero_DW01_sub_1
+                     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  floatALU_DW01_sub_4
+                     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  floatALU_DW01_inc_0
+                     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.2000     0.2000
+  cpu/EXE_state/WBadr_EXE_reg_1_/CP (DFCNQD2BWP16P90LVT)
+                                                        0.0000     0.2000 r
+  cpu/EXE_state/WBadr_EXE_reg_1_/Q (DFCNQD2BWP16P90LVT)
+                                                        0.0638     0.2638 f
+  cpu/EXE_state/WBadr_EXE[1] (EXE_state)                0.0000     0.2638 f
+  cpu/EXE_state/EXE_rd_adr[1] (EXE_state)               0.0000     0.2638 f
+  cpu/EXE_state/U630/Z (XOR2D1BWP16P90LVT)              0.0187     0.2825 f
+  cpu/EXE_state/U379/ZN (NR4D1BWP16P90LVT)              0.0151     0.2977 r
+  cpu/EXE_state/U377/ZN (ND2D1BWP16P90LVT)              0.0636     0.3613 f
+  cpu/EXE_state/U551/Z (AN2D1BWP16P90LVT)               0.0588     0.4201 f
+  cpu/EXE_state/U414/ZN (AOI22D1BWP16P90LVT)            0.0198     0.4399 r
+  cpu/EXE_state/U413/ZN (OAI21D1BWP16P90LVT)            0.0172     0.4571 f
+  cpu/EXE_state/U57/Z (AO22D1BWP16P90LVT)               0.1420     0.5991 f
+  cpu/EXE_state/floatALU/data2[30] (floatALU)           0.0000     0.5991 f
+  cpu/EXE_state/floatALU/U389/Z (BUFFD1BWP16P90LVT)     0.0310     0.6301 f
+  cpu/EXE_state/floatALU/U412/ZN (INR2D1BWP16P90)       0.0177     0.6478 f
+  cpu/EXE_state/floatALU/U413/ZN (AOI21D1BWP16P90)      0.0152     0.6630 r
+  cpu/EXE_state/floatALU/U414/ZN (OAI21D1BWP16P90)      0.0147     0.6777 f
+  cpu/EXE_state/floatALU/U5/ZN (OAI31D1BWP16P90LVT)     0.1860     0.8637 r
+  cpu/EXE_state/floatALU/U282/ZN (INR2D1BWP16P90LVT)    0.0565     0.9202 f
+  cpu/EXE_state/floatALU/r380/A[1] (floatALU_DW01_sub_1)
+                                                        0.0000     0.9202 f
+  cpu/EXE_state/floatALU/r380/U2_1/CO (FA1D1BWP16P90LVT)
+                                                        0.0387     0.9589 f
+  cpu/EXE_state/floatALU/r380/U2_2/CO (FA1D1BWP16P90LVT)
+                                                        0.0268     0.9856 f
+  cpu/EXE_state/floatALU/r380/U2_3/CO (FA1D1BWP16P90LVT)
+                                                        0.0268     1.0124 f
+  cpu/EXE_state/floatALU/r380/U2_4/CO (FA1D1BWP16P90LVT)
+                                                        0.0268     1.0392 f
+  cpu/EXE_state/floatALU/r380/U2_5/CO (FA1D1BWP16P90LVT)
+                                                        0.0268     1.0660 f
+  cpu/EXE_state/floatALU/r380/U2_6/CO (FA1D1BWP16P90LVT)
+                                                        0.0268     1.0928 f
+  cpu/EXE_state/floatALU/r380/U2_7/CO (FA1D1BWP16P90LVT)
+                                                        0.0268     1.1196 f
+  cpu/EXE_state/floatALU/r380/U2_8/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.1461 f
+  cpu/EXE_state/floatALU/r380/U2_9/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.1726 f
+  cpu/EXE_state/floatALU/r380/U2_10/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.1991 f
+  cpu/EXE_state/floatALU/r380/U2_11/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.2256 f
+  cpu/EXE_state/floatALU/r380/U2_12/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.2522 f
+  cpu/EXE_state/floatALU/r380/U2_13/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.2787 f
+  cpu/EXE_state/floatALU/r380/U2_14/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.3052 f
+  cpu/EXE_state/floatALU/r380/U2_15/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.3317 f
+  cpu/EXE_state/floatALU/r380/U2_16/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.3582 f
+  cpu/EXE_state/floatALU/r380/U2_17/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.3848 f
+  cpu/EXE_state/floatALU/r380/U2_18/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.4113 f
+  cpu/EXE_state/floatALU/r380/U2_19/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.4378 f
+  cpu/EXE_state/floatALU/r380/U2_20/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.4643 f
+  cpu/EXE_state/floatALU/r380/U2_21/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.4908 f
+  cpu/EXE_state/floatALU/r380/U2_22/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.5174 f
+  cpu/EXE_state/floatALU/r380/U2_23/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.5439 f
+  cpu/EXE_state/floatALU/r380/U2_24/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.5704 f
+  cpu/EXE_state/floatALU/r380/U2_25/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.5969 f
+  cpu/EXE_state/floatALU/r380/U2_26/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.6234 f
+  cpu/EXE_state/floatALU/r380/U2_27/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.6499 f
+  cpu/EXE_state/floatALU/r380/U2_28/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.6765 f
+  cpu/EXE_state/floatALU/r380/U2_29/CO (FA1D1BWP16P90LVT)
+                                                        0.0265     1.7030 f
+  cpu/EXE_state/floatALU/r380/U2_30/S (FA1D1BWP16P90LVT)
+                                                        0.0235     1.7264 f
+  cpu/EXE_state/floatALU/r380/DIFF[30] (floatALU_DW01_sub_1)
+                                                        0.0000     1.7264 f
+  cpu/EXE_state/floatALU/U253/ZN (AOI22D1BWP16P90LVT)   0.0108     1.7372 r
+  cpu/EXE_state/floatALU/U164/ZN (IOA21D1BWP16P90LVT)   0.0159     1.7532 f
+  cpu/EXE_state/floatALU/count_zero/x[30] (count_leading_zero)
+                                                        0.0000     1.7532 f
+  cpu/EXE_state/floatALU/count_zero/U59/ZN (NR2D1BWP16P90LVT)
+                                                        0.0136     1.7667 r
+  cpu/EXE_state/floatALU/count_zero/U68/ZN (INR2D1BWP16P90LVT)
+                                                        0.0171     1.7838 r
+  cpu/EXE_state/floatALU/count_zero/U63/ZN (INR2D1BWP16P90LVT)
+                                                        0.0170     1.8009 r
+  cpu/EXE_state/floatALU/count_zero/U69/ZN (INR2D1BWP16P90LVT)
+                                                        0.0172     1.8180 r
+  cpu/EXE_state/floatALU/count_zero/U71/ZN (INR2D1BWP16P90LVT)
+                                                        0.0171     1.8351 r
+  cpu/EXE_state/floatALU/count_zero/U70/ZN (INR2D1BWP16P90LVT)
+                                                        0.0170     1.8521 r
+  cpu/EXE_state/floatALU/count_zero/U64/ZN (INR2D1BWP16P90LVT)
+                                                        0.0153     1.8674 r
+  cpu/EXE_state/floatALU/count_zero/U22/ZN (ND3D1BWP16P90LVT)
+                                                        0.0185     1.8859 f
+  cpu/EXE_state/floatALU/count_zero/U21/ZN (IND3D1BWP16P90LVT)
+                                                        0.0256     1.9115 f
+  cpu/EXE_state/floatALU/count_zero/U65/ZN (IND3D1BWP16P90LVT)
+                                                        0.0195     1.9309 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/A[0] (count_leading_zero_DW01_sub_0)
+                                                        0.0000     1.9309 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U43/Z (OR2D1BWP16P90LVT)
+                                                        0.0145     1.9454 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U1/Z (OR2D1BWP16P90LVT)
+                                                        0.0140     1.9594 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2_2/CO (FA1D1BWP16P90LVT)
+                                                        0.0234     1.9828 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2/Z (OR2D1BWP16P90LVT)
+                                                        0.0149     1.9977 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2_4/CO (FA1D1BWP16P90LVT)
+                                                        0.0234     2.0211 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U3/Z (OR2D1BWP16P90LVT)
+                                                        0.0149     2.0360 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2_6/CO (FA1D1BWP16P90LVT)
+                                                        0.0234     2.0593 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U42/Z (OR2D1BWP16P90LVT)
+                                                        0.0149     2.0742 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2_8/CO (FA1D1BWP16P90LVT)
+                                                        0.0234     2.0976 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U8/Z (OR2D1BWP16P90LVT)
+                                                        0.0149     2.1125 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2_10/CO (FA1D1BWP16P90LVT)
+                                                        0.0233     2.1359 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U16/Z (OR2D1BWP16P90LVT)
+                                                        0.0149     2.1508 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2_12/CO (FA1D1BWP16P90LVT)
+                                                        0.0234     2.1742 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U7/Z (OR2D1BWP16P90LVT)
+                                                        0.0149     2.1891 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2_14/CO (FA1D1BWP16P90LVT)
+                                                        0.0233     2.2124 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U24/Z (OR2D1BWP16P90LVT)
+                                                        0.0149     2.2273 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2_16/CO (FA1D1BWP16P90LVT)
+                                                        0.0234     2.2507 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U29/Z (OR2D1BWP16P90LVT)
+                                                        0.0149     2.2656 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2_18/CO (FA1D1BWP16P90LVT)
+                                                        0.0234     2.2890 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U23/Z (OR2D1BWP16P90LVT)
+                                                        0.0149     2.3039 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2_20/CO (FA1D1BWP16P90LVT)
+                                                        0.0234     2.3273 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U31/Z (OR2D1BWP16P90LVT)
+                                                        0.0149     2.3422 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2_22/CO (FA1D1BWP16P90LVT)
+                                                        0.0234     2.3656 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U9/Z (OR2D1BWP16P90LVT)
+                                                        0.0149     2.3805 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2_24/CO (FA1D1BWP16P90LVT)
+                                                        0.0233     2.4039 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U4/Z (OR2D1BWP16P90LVT)
+                                                        0.0149     2.4188 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2_26/CO (FA1D1BWP16P90LVT)
+                                                        0.0233     2.4421 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U5/Z (OR2D1BWP16P90LVT)
+                                                        0.0149     2.4570 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2_28/CO (FA1D1BWP16P90LVT)
+                                                        0.0233     2.4803 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U6/Z (OR2D1BWP16P90LVT)
+                                                        0.0149     2.4952 f
+  cpu/EXE_state/floatALU/count_zero/sub_26/U2_30/S (FA1D1BWP16P90LVT)
+                                                        0.0379     2.5331 r
+  cpu/EXE_state/floatALU/count_zero/sub_26/DIFF[30] (count_leading_zero_DW01_sub_0)
+                                                        0.0000     2.5331 r
+  cpu/EXE_state/floatALU/count_zero/U78/Z (AN2D1BWP16P90)
+                                                        0.0227     2.5557 r
+  cpu/EXE_state/floatALU/count_zero/add_28/U1_29/S (FA1D1BWP16P90LVT)
+                                                        0.0312     2.5870 r
+  cpu/EXE_state/floatALU/count_zero/add_30/U1_25/S (FA1D1BWP16P90LVT)
+                                                        0.0385     2.6255 f
+  cpu/EXE_state/floatALU/count_zero/add_32/U1_17/CO (FA1D1BWP16P90LVT)
+                                                        0.0277     2.6531 f
+  cpu/EXE_state/floatALU/count_zero/add_32/U1_18/S (FA1D1BWP16P90LVT)
+                                                        0.0379     2.6910 r
+  cpu/EXE_state/floatALU/count_zero/sub_0_root_sub_0_root_sub_38/B[2] (count_leading_zero_DW01_sub_1)
+                                                        0.0000     2.6910 r
+  cpu/EXE_state/floatALU/count_zero/sub_0_root_sub_0_root_sub_38/U5/ZN (CKND1BWP16P90LVT)
+                                                        0.0088     2.6998 f
+  cpu/EXE_state/floatALU/count_zero/sub_0_root_sub_0_root_sub_38/U2_2/CO (FA1D1BWP16P90LVT)
+                                                        0.0268     2.7266 f
+  cpu/EXE_state/floatALU/count_zero/sub_0_root_sub_0_root_sub_38/U2_3/S (FA1D1BWP16P90LVT)
+                                                        0.0379     2.7645 r
+  cpu/EXE_state/floatALU/count_zero/sub_0_root_sub_0_root_sub_38/DIFF[3] (count_leading_zero_DW01_sub_1)
+                                                        0.0000     2.7645 r
+  cpu/EXE_state/floatALU/count_zero/result[3] (count_leading_zero)
+                                                        0.0000     2.7645 r
+  cpu/EXE_state/floatALU/U26/ZN (CKND1BWP16P90LVT)      0.0110     2.7755 f
+  cpu/EXE_state/floatALU/U8/ZN (CKND1BWP16P90LVT)       0.0597     2.8351 r
+  cpu/EXE_state/floatALU/U695/Z (MUX2D1BWP16P90LVT)     0.0273     2.8625 f
+  cpu/EXE_state/floatALU/U11/ZN (NR3D1BWP16P90LVT)      0.0271     2.8895 r
+  cpu/EXE_state/floatALU/r384/A[0] (floatALU_DW01_inc_0)
+                                                        0.0000     2.8895 r
+  cpu/EXE_state/floatALU/r384/U1_1_1/CO (HA1D1BWP16P90LVT)
+                                                        0.0236     2.9132 r
+  cpu/EXE_state/floatALU/r384/U1_1_2/CO (HA1D1BWP16P90LVT)
+                                                        0.0171     2.9303 r
+  cpu/EXE_state/floatALU/r384/U1_1_3/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     2.9473 r
+  cpu/EXE_state/floatALU/r384/U1_1_4/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     2.9644 r
+  cpu/EXE_state/floatALU/r384/U1_1_5/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     2.9814 r
+  cpu/EXE_state/floatALU/r384/U1_1_6/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     2.9985 r
+  cpu/EXE_state/floatALU/r384/U1_1_7/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     3.0155 r
+  cpu/EXE_state/floatALU/r384/U1_1_8/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     3.0326 r
+  cpu/EXE_state/floatALU/r384/U1_1_9/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     3.0496 r
+  cpu/EXE_state/floatALU/r384/U1_1_10/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     3.0666 r
+  cpu/EXE_state/floatALU/r384/U1_1_11/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     3.0836 r
+  cpu/EXE_state/floatALU/r384/U1_1_12/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     3.1007 r
+  cpu/EXE_state/floatALU/r384/U1_1_13/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     3.1177 r
+  cpu/EXE_state/floatALU/r384/U1_1_14/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     3.1347 r
+  cpu/EXE_state/floatALU/r384/U1_1_15/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     3.1517 r
+  cpu/EXE_state/floatALU/r384/U1_1_16/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     3.1687 r
+  cpu/EXE_state/floatALU/r384/U1_1_17/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     3.1858 r
+  cpu/EXE_state/floatALU/r384/U1_1_18/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     3.2028 r
+  cpu/EXE_state/floatALU/r384/U1_1_19/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     3.2198 r
+  cpu/EXE_state/floatALU/r384/U1_1_20/CO (HA1D1BWP16P90LVT)
+                                                        0.0170     3.2368 r
+  cpu/EXE_state/floatALU/r384/U1_1_21/CO (HA1D1BWP16P90LVT)
+                                                        0.0154     3.2523 r
+  cpu/EXE_state/floatALU/r384/U1/Z (XOR2D1BWP16P90)     0.0190     3.2713 r
+  cpu/EXE_state/floatALU/r384/SUM[22] (floatALU_DW01_inc_0)
+                                                        0.0000     3.2713 r
+  cpu/EXE_state/floatALU/U112/Z (AO22D1BWP16P90LVT)     0.0131     3.2844 r
+  cpu/EXE_state/floatALU/result[22] (floatALU)          0.0000     3.2844 r
+  cpu/EXE_state/U95/ZN (AOI22D1BWP16P90LVT)             0.0068     3.2912 f
+  cpu/EXE_state/U536/ZN (ND4D1BWP16P90LVT)              0.0129     3.3040 r
+  cpu/EXE_state/result_EXE_reg_22_/D (DFCNQD2BWP16P90LVT)
+                                                        0.0000     3.3040 r
+  data arrival time                                                3.3040
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.2000     4.2000
+  clock uncertainty                                    -0.0200     4.1800
+  cpu/EXE_state/result_EXE_reg_22_/CP (DFCNQD2BWP16P90LVT)
+                                                        0.0000     4.1800 r
+  library setup time                                   -0.0047     4.1753
+  data required time                                               4.1753
+  --------------------------------------------------------------------------
+  data required time                                               4.1753
+  data arrival time                                               -3.3040
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.8712
+
+
+1

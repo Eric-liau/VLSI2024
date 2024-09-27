@@ -1,0 +1,28 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
++prog_path=/home/LiauYiShang/VLSI2024/hw1/P76131084/./sim/prog0
++rdcycle=1
++incdir+/home/LiauYiShang/VLSI2024/hw1/P76131084/./src+/home/LiauYiShang/VLSI2024/hw1/P76131084/./src/AXI+/home/LiauYiShang/VLSI2024/hw1/P76131084/./include+/home/LiauYiShang/VLSI2024/hw1/P76131084/./sim
++define+prog0+FSDB_ALL
++access+r
++nc64bit
++notimingcheck
+-MESSAGES
++EMGRLOG
+irun.log
+-XLSTIME
+1727430526
+-XLKEEP
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdl.var
+-XLNAME
+irun
+-XLVERSION
+"TOOL:	irun(64)	15.20-s084"

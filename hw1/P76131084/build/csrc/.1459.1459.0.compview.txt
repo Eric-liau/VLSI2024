@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1727428477.449869665, "rt":1.98, "ut":0.97, "st":0.30}}
+{"vcselab":{"timestamp_begin":1727428479.519066014, "rt":1.00, "ut":0.42, "st":0.14}}
+{"link":{"timestamp_begin":1727428480.587201108, "rt":0.43, "ut":0.20, "st":0.11}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1727428476.739426217}
+{"VCS_COMP_START_TIME": 1727428476.739426217}
+{"VCS_COMP_END_TIME": 1727428482.753370494}
+{"VCS_USER_OPTIONS": "-R -sverilog /home/user2/avsd24/avsd24108/VLSI2024/hw1/P76131084/./sim/top_tb.sv -debug_access+all -full64 +incdir+/home/user2/avsd24/avsd24108/VLSI2024/hw1/P76131084/./src+/home/user2/avsd24/avsd24108/VLSI2024/hw1/P76131084/./src/AXI+/home/user2/avsd24/avsd24108/VLSI2024/hw1/P76131084/./include+/home/user2/avsd24/avsd24108/VLSI2024/hw1/P76131084/./sim +define+prog0 +prog_path=/home/user2/avsd24/avsd24108/VLSI2024/hw1/P76131084/./sim/prog0 +rdcycle=1 +notimingcheck"}
+{"vcs1": {"peak_mem": 353984}}
+{"vcselab": {"peak_mem": 225876}}

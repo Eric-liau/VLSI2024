@@ -1,0 +1,3 @@
+Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/Novas -nWave top.fsdb
+uname(Linux vlsicad5 3.10.0-1160.99.1.el7.x86_64 #1 SMP Wed Sep 13 14:19:20 UTC 2023 x86_64)
+au time 670.475698 11.862030 7.780996 delta 322527232 322527232 total 900665344 900665344

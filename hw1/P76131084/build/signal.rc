@@ -1,0 +1,84 @@
+Magic 271485
+Revision Verdi_Q-2020.03
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 139 1920 1017 100 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/LiauYiShang/VLSI2024/hw1/P76131084/build/top.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 394531.250000
+cursor 0.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 5
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/LiauYiShang/VLSI2024/hw1/P76131084/build/top.fsdb"
+addSignal -h 15 /top_tb/TOP/DM1/A[13:0]
+addSignal -h 15 -holdScope BWEB[31:0]
+addSignal -h 15 -holdScope CLK
+addSignal -h 15 -holdScope DI[31:0]
+addSignal -h 15 -holdScope WEB
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/LiauYiShang/VLSI2024/hw1/P76131084/build/top.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm open
+
+"/top_tb"
+"/top_tb/TOP"
+"/top_tb/TOP/DM1"
+"/top_tb/TOP/cpu"
+"/top_tb/TOP/cpu/ID"
+"/top_tb/TOP/cpu/ID/register"
+
+SCOPE_LIST_BEGIN
+"/top_tb"
+"/top_tb/TOP"
+"/top_tb/TOP/cpu/ID"
+"/top_tb/TOP/cpu/ID/register"
+"/top_tb/TOP/cpu"
+"/top_tb/TOP/DM1"
+"/top_tb/TOP/cpu/EXE"
+"/top_tb/TOP/cpu/MEM"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

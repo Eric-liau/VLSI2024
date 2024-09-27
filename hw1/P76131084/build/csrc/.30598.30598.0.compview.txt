@@ -1,0 +1,6 @@
+{"vcs1":{"timestamp_begin":1727084635.271660034, "rt":0.75, "ut":0.40, "st":0.12}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1727084634.303322597}
+{"VCS_COMP_START_TIME": 1727084634.303322597}
+{"VCS_COMP_END_TIME": 1727084636.139258341}
+{"VCS_USER_OPTIONS": "-R -sverilog +neg_tchk -negdelay -v /usr/cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/VERILOG/N16ADFP_StdCell.v /home/user2/avsd24/avsd24108/VLSI2024/hw1/P76131084/./sim/top_tb.sv -debug_access+all -full64 -diag=sdf:verbose +incdir+/home/user2/avsd24/avsd24108/VLSI2024/hw1/P76131084/./syn+/home/user2/avsd24/avsd24108/VLSI2024/hw1/P76131084/./src+/home/user2/avsd24/avsd24108/VLSI2024/hw1/P76131084/./include+/home/user2/avsd24/avsd24108/VLSI2024/hw1/P76131084/./sim +define+SYN+prog1 +no_notifier +prog_path=/home/user2/avsd24/avsd24108/VLSI2024/hw1/P76131084/./sim/prog1"}
+{"vcs1": {"peak_mem": 337400}}

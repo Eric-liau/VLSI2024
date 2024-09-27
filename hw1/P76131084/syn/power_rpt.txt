@@ -1,0 +1,102 @@
+Loading db file '/usr/cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/NLDM/N16ADFP_StdCellss0p72vm40c.db'
+Loading db file '/home/user2/avsd24/avsd24108/VLSI2024/hw1/P76131084/sim/SRAM/SRAM_ss0p72v0p72vm40c_100a.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : top
+Version: O-2018.06
+Date   : Fri Sep 27 18:06:30 2024
+****************************************
+
+
+Library(s) Used:
+
+    N16ADFP_StdCellss0p72vm40c (File: /usr/cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/NLDM/N16ADFP_StdCellss0p72vm40c.db)
+    SRAM_ss0p72v0p72vm40c_100a (File: /home/user2/avsd24/avsd24108/VLSI2024/hw1/P76131084/sim/SRAM/SRAM_ss0p72v0p72vm40c_100a.db)
+
+
+Operating Conditions: ss0p72vm40c   Library: N16ADFP_StdCellss0p72vm40c
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+top                    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+CPU                    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+SRAM_wrapper_1         ZeroWireload      N16ADFP_StdCellss0p72vm40c
+IF_state               ZeroWireload      N16ADFP_StdCellss0p72vm40c
+ID_state               ZeroWireload      N16ADFP_StdCellss0p72vm40c
+EXE_state              ZeroWireload      N16ADFP_StdCellss0p72vm40c
+MEM_state              ZeroWireload      N16ADFP_StdCellss0p72vm40c
+WB_state               ZeroWireload      N16ADFP_StdCellss0p72vm40c
+ProgramCounter         ZeroWireload      N16ADFP_StdCellss0p72vm40c
+StallCtrl              ZeroWireload      N16ADFP_StdCellss0p72vm40c
+ControlUnit            ZeroWireload      N16ADFP_StdCellss0p72vm40c
+immGenerator           ZeroWireload      N16ADFP_StdCellss0p72vm40c
+Register               ZeroWireload      N16ADFP_StdCellss0p72vm40c
+ALUctrl                ZeroWireload      N16ADFP_StdCellss0p72vm40c
+ALU                    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+floatALU               ZeroWireload      N16ADFP_StdCellss0p72vm40c
+count_leading_zero     ZeroWireload      N16ADFP_StdCellss0p72vm40c
+SRAM_wrapper_0         ZeroWireload      N16ADFP_StdCellss0p72vm40c
+floatALU_DW01_inc_0    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+floatALU_DW01_sub_0    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+floatALU_DW01_sub_1    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+floatALU_DW01_add_0    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+floatALU_DW_cmp_1      ZeroWireload      N16ADFP_StdCellss0p72vm40c
+floatALU_DW01_sub_2    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+floatALU_DW01_sub_3    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+count_leading_zero_DW01_sub_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+ALU_DW01_sub_0         ZeroWireload      N16ADFP_StdCellss0p72vm40c
+ALU_DW01_add_0         ZeroWireload      N16ADFP_StdCellss0p72vm40c
+ALU_DW01_cmp6_0        ZeroWireload      N16ADFP_StdCellss0p72vm40c
+IF_state_DW01_inc_0    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+IF_state_DW01_sub_0    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+IF_state_DW01_inc_1    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+IF_state_DW01_add_0    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+EXE_state_DW01_add_0   ZeroWireload      N16ADFP_StdCellss0p72vm40c
+EXE_state_DW01_sub_0   ZeroWireload      N16ADFP_StdCellss0p72vm40c
+ALU_DW_mult_tc_0       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+ALU_DW_mult_tc_1       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+ALU_DW_mult_uns_0      ZeroWireload      N16ADFP_StdCellss0p72vm40c
+count_leading_zero_DW01_sub_1
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+floatALU_DW01_inc_1    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+floatALU_DW01_sub_4    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+
+
+Global Operating Voltage = 0.72 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   3.2071 mW   (98%)
+  Net Switching Power  =  58.8737 uW    (2%)
+                         ---------
+Total Dynamic Power    =   3.2660 mW  (100%)
+
+Cell Leakage Power     =   5.7377 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             1.4740        3.6162e-04          772.3020            1.4751  (  45.09%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network  4.8303e-04            0.0000            0.2560        4.8329e-04  (   0.01%)
+register           1.6843        4.4639e-03        1.9800e+03            1.6907  (  51.68%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  4.8469e-02        5.4049e-02        2.9851e+03            0.1055  (   3.22%)
+--------------------------------------------------------------------------------------------------
+Total              3.2072 mW     5.8874e-02 mW     5.7377e+03 nW         3.2718 mW
+1

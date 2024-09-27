@@ -1,0 +1,204 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Sep 27, 2024 at 17:48:46 CST
+irun
+	/home/LiauYiShang/VLSI2024/hw1/P76131084/./sim/top_tb.sv
+	+incdir+/home/LiauYiShang/VLSI2024/hw1/P76131084/./src+/home/LiauYiShang/VLSI2024/hw1/P76131084/./src/AXI+/home/LiauYiShang/VLSI2024/hw1/P76131084/./include+/home/LiauYiShang/VLSI2024/hw1/P76131084/./sim
+	+define+prog0+FSDB_ALL
+	-define CYCLE=10.0
+	-define MAX=100000
+	+access+r
+	+nc64bit
+	+prog_path=/home/LiauYiShang/VLSI2024/hw1/P76131084/./sim/prog0
+	+rdcycle=1
+	+notimingcheck
+
+   User defined plus("+") options:
+	+prog_path=/home/LiauYiShang/VLSI2024/hw1/P76131084/./sim/prog0
+	+rdcycle=1
+
+Recompiling... reason: file '../src/ALU.sv' is newer than expected.
+	expected: Tue Sep 24 15:18:47 2024
+	actual:   Fri Sep 27 17:47:06 2024
+ncvlog: *W,NOTIND: unable to access -INCDIR /home/LiauYiShang/VLSI2024/hw1/P76131084/./src/AXI (No such file or directory).
+file: /home/LiauYiShang/VLSI2024/hw1/P76131084/./sim/top_tb.sv
+`define CYCLE 10.0 // Cycle time
+                                |
+ncvlog: *W,MACNDF (/home/LiauYiShang/VLSI2024/hw1/P76131084/./sim/top_tb.sv,2|32): The text macro 'CYCLE' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+`define MAX 100000 // Max cycle number
+                                      |
+ncvlog: *W,MACNDF (/home/LiauYiShang/VLSI2024/hw1/P76131084/./sim/top_tb.sv,3|38): The text macro 'MAX' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+	module worklib.Register:sv
+		errors: 0, warnings: 0
+	module worklib.ID_state:sv
+		errors: 0, warnings: 0
+	module worklib.ALU:sv
+		errors: 0, warnings: 0
+	module worklib.floatALU:sv
+		errors: 0, warnings: 0
+	module worklib.ALUctrl:sv
+		errors: 0, warnings: 0
+	module worklib.EXE_state:sv
+		errors: 0, warnings: 0
+	module worklib.CPU:sv
+		errors: 0, warnings: 0
+    $value$plusargs("prog_path=%s", prog_path);
+                  |
+ncvlog: *W,NOSYST (/home/LiauYiShang/VLSI2024/hw1/P76131084/./sim/top_tb.sv,43|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+	$value$plusargs("rdcycle=%s", rdcycle);
+	              |
+ncvlog: *W,NOSYST (/home/LiauYiShang/VLSI2024/hw1/P76131084/./sim/top_tb.sv,44|15): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+      $fscanf(gf, "%h\n", GOLDEN[num]);
+            |
+ncvlog: *W,NOSYST (/home/LiauYiShang/VLSI2024/hw1/P76131084/./sim/top_tb.sv,63|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+ncvlog: *W,SPDUSD: Include directory /home/LiauYiShang/VLSI2024/hw1/P76131084/./include given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 4
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+MEM_state MEM_state(
+                  |
+ncelab: *W,CUVWSP (../src/CPU.sv,158|18): 1 output port was not connected:
+ncelab: (../src/MEM_state.sv,26): MemRead_MEM
+
+	Top level design units:
+		top_tb
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	$readmemh({prog_path, "/main0.hex"}, Memory_byte0);
+	                                                |
+ncelab: *W,MEMODR (../sim/top_tb.sv,47|49): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main1.hex"}, Memory_byte1); 
+                                                    |
+ncelab: *W,MEMODR (../sim/top_tb.sv,48|52): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main2.hex"}, Memory_byte2);
+                                                    |
+ncelab: *W,MEMODR (../sim/top_tb.sv,49|52): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main3.hex"}, Memory_byte3); 
+                                                    |
+ncelab: *W,MEMODR (../sim/top_tb.sv,50|52): $readmem default memory order incompatible with IEEE1364.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ALU:sv <0x44633aea>
+			streams:   1, words:  6831
+		worklib.ALUctrl:sv <0x135682de>
+			streams:   1, words:  4152
+		worklib.CPU:sv <0x3214d7dc>
+			streams:   3, words:   878
+		worklib.EXE_state:sv <0x395bdb28>
+			streams:  16, words: 12977
+		worklib.ID_state:sv <0x6e16d1b4>
+			streams:   9, words: 10015
+		worklib.MEM_state:sv <0x433b8501>
+			streams:   4, words:  2957
+		worklib.Register:sv <0x7dffccd8>
+			streams:   5, words:  2898
+		worklib.floatALU:sv <0x68b0975f>
+			streams:   4, words:  6813
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                21      19
+		Primitives:            242       2
+		Timing outputs:         66      65
+		Registers:             420     278
+		Scalar wires:          161       -
+		Expanded wires:        264      12
+		Vectored wires:         68       -
+		Always blocks:         200     110
+		Initial blocks:          4       3
+		Cont. assignments:      59      46
+		Pseudo assignments:     13      12
+		Timing checks:         752       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.top_tb:sv
+Loading snapshot worklib.top_tb:sv .................... Done
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_Q-2020.03, Linux x86_64/64bit, 02/09/2020
+(C) 1996 - 2020 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
+*Verdi* : Enable +struct and +mda dumping.
+*Verdi* : End of traversing.
+
+Done
+
+DM[8192] = fffffff0, pass
+DM[8193] = fffffff8, pass
+DM[8194] = 00000008, pass
+DM[8195] = 00000001, pass
+DM[8196] = 00000001, pass
+DM[8197] = 78787878, pass
+DM[8198] = 000091a2, pass
+DM[8199] = 00000003, pass
+DM[8200] = fefcfefd, pass
+DM[8201] = 10305070, pass
+DM[8202] = 8bfd6700, pass
+DM[8203] = 00000000, pass
+DM[8204] = 10200ffc, pass
+DM[8205] = f2a93e0c, pass
+DM[8206] = cccccccc, pass
+DM[8207] = ffffffcc, pass
+DM[8208] = ffffcccc, pass
+DM[8209] = 000000cc, pass
+DM[8210] = 0000cccc, pass
+DM[8211] = 00000d9d, pass
+DM[8212] = 00000004, pass
+DM[8213] = 00000003, pass
+DM[8214] = 000001a6, pass
+DM[8215] = 00000ec6, pass
+DM[8216] = 2468b7a8, pass
+DM[8217] = 5dbf9f00, pass
+DM[8218] = 00012b38, pass
+DM[8219] = fa2817b7, pass
+DM[8220] = ff000000, pass
+DM[8221] = 12345678, pass
+DM[8222] = 0000f000, pass
+DM[8223] = 00000f00, pass
+DM[8224] = 000000f0, pass
+DM[8225] = 0000000f, pass
+DM[8226] = 56780000, pass
+DM[8227] = 78000000, pass
+DM[8228] = 00005678, pass
+DM[8229] = 00000078, pass
+DM[8230] = 12345678, pass
+DM[8231] = ce780000, pass
+DM[8232] = fffff000, pass
+DM[8233] = fffff000, pass
+DM[8234] = fffff000, pass
+DM[8235] = fffff000, pass
+DM[8236] = fffff000, pass
+DM[8237] = fffff000, pass
+DM[8238] = 1357a274, pass
+DM[8239] = 13578000, pass
+DM[8240] = fffff004, pass
+DM[8241] = 40bb3276, pass
+DM[8242] = be3aa25e, pass
+DM[8243] = 40b55d63, pass
+DM[8244] = c213a0c4, pass
+DM[8245] = 40c10789, pass
+DM[8246] = 404c5a18, pass
+DM[8247] = 00000000, pass
+DM[8248] = 000013fb, pass
+your total cycle is 0.000000 
+your total cycle is 8522.000000 
+
+
+
+
+        ****************************               
+        **                        **       |__||  
+        **  Congratulations !!    **      / O.O  | 
+        **                        **    /_____   | 
+        **  Simulation PASS!!     **   /^ ^ ^ \  |
+        **                        **  |^ ^ ^ ^ |w| 
+        ****************************   \m___m__|_|
+
+
+Simulation complete via $finish(1) at time 85420 NS + 2
+../sim/top_tb.sv:94     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on Sep 27, 2024 at 17:48:51 CST  (total: 00:00:05)
