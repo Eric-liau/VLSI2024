@@ -1,0 +1,3 @@
+2024-10-17 14:51:11.189625: : Starting Expert System Logger
+2024-10-17 14:51:16.617356: ERROR  : JG Query "abvip -version" failed ("ERROR (ECD027): Set the ABVIP installation directory with "abvip -set_location".
+")

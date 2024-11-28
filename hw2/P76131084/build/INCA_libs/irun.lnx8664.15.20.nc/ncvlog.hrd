@@ -1,0 +1,18 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-INCDIR
+/home/LiauYiShang/VLSI2024/hw2/P76131084/src
+-INCDIR
+/home/LiauYiShang/VLSI2024/hw2/P76131084/src/AXI
+-INCDIR
+/home/LiauYiShang/VLSI2024/hw2/P76131084/include
+-INCDIR
+/home/LiauYiShang/VLSI2024/hw2/P76131084/sim
+-DEFINE
+prog0
+-DEFINE
+CYCLE=9.0
+-DEFINE
+MAX=300000

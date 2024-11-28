@@ -1,0 +1,132 @@
+Magic 271485
+Revision Verdi_Q-2020.03
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 23 1920 1009 157 130
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/LiauYiShang/VLSI2024/hw2/P76131084/build/top.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 27797468.628532 27824099.487907
+cursor 27809550.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 41
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByValue
+
+
+addGroup "G1"
+activeDirFile "" "/home/LiauYiShang/VLSI2024/hw2/P76131084/build/top.fsdb"
+addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/ID_state/instr[31:0]
+addSignal -h 15 -holdScope clk
+addSignal -h 15 -holdScope rst
+addSignal -h 15 /top_tb/TOP/DM1/DI[31:0]
+addSignal -h 15 -holdScope DO[31:0]
+addSignal -h 15 -holdScope A[13:0]
+addSignal -h 15 -holdScope BWEB[31:0]
+addSignal -h 15 -holdScope CEB
+addGroup "G2"
+addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/MEM_state/pc_in[31:0]
+addSignal -h 15 -holdScope memdata_in[31:0]
+addSignal -h 15 -holdScope memdata_out[31:0]
+addSignal -h 15 -holdScope memdata[31:0]
+addSignal -h 15 -holdScope CEB
+addSignal -h 15 /top_tb/TOP/CPU_wrapper/master1/RDATA[31:0]
+addSignal -h 15 -holdScope RREADY
+addSignal -h 15 -holdScope RVALID
+addSignal -h 15 /top_tb/TOP/DM1/RDATA[31:0]
+addSignal -expanded -h 15 -UNSIGNED -HEX /top_tb/TOP/CPU_wrapper/cpu/ID_state/register/reg_file[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[10][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[9][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[8][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[7][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[6][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[5][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[4][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[3][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[2][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[1][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[0][31:0]
+addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/EXE_state/result_EXE[31:0]
+addSignal -h 15 -holdScope DM_stall
+addSignal -h 15 -holdScope MemRead_EXE
+addSignal -h 15 -holdScope MemRead_ID
+addSignal -h 15 -holdScope rs1_data[31:0]
+addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/ID_state/rs1_data[31:0]
+addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/ID_state/register/rs1[4:0]
+addSignal -h 15 -holdScope val1[31:0]
+addSignal -h 15 -holdScope WBctl
+addSignal -h 15 -holdScope val3[31:0]
+addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/ID_state/WB_pc_in[31:0]
+addGroup "G3"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/LiauYiShang/VLSI2024/hw2/P76131084/build/top.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/top_tb"
+"/top_tb/TOP"
+"/top_tb/TOP/CPU_wrapper"
+"/top_tb/TOP/CPU_wrapper/cpu"
+"/top_tb/TOP/CPU_wrapper/cpu/ID_state"
+"/top_tb/TOP/CPU_wrapper/cpu/ID_state/register"
+"/top_tb/TOP/CPU_wrapper/cpu/IF_state"
+"/top_tb/TOP/CPU_wrapper/cpu/MEM_state"
+"/top_tb/TOP/CPU_wrapper/master1"
+"/top_tb/TOP/DM1"
+"/top_tb/TOP/DM1/i_SRAM"
+
+SCOPE_LIST_BEGIN
+"/top_tb"
+"/top_tb/TOP/CPU_wrapper/cpu/IF_state"
+"/top_tb/TOP"
+"/top_tb/TOP/CPU_wrapper"
+"/top_tb/TOP/CPU_wrapper/cpu"
+"/top_tb/TOP/CPU_wrapper/cpu/ID_state"
+"/top_tb/TOP/DM1"
+"/top_tb/TOP/DM1/i_SRAM"
+"/top_tb/TOP/CPU_wrapper/cpu/EXE_state"
+"/top_tb/TOP/AXI"
+"/top_tb/TOP/CPU_wrapper/master1"
+"/top_tb/TOP/CPU_wrapper/master0"
+"/top_tb/TOP/IM1"
+"/top_tb/TOP/CPU_wrapper/cpu/ID_state/register"
+"/top_tb/TOP/CPU_wrapper/cpu/MEM_state"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

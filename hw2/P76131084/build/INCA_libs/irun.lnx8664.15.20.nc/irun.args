@@ -1,0 +1,16 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+/home/LiauYiShang/VLSI2024/hw2/P76131084/sim/top_tb.sv
++incdir+/home/LiauYiShang/VLSI2024/hw2/P76131084/src+/home/LiauYiShang/VLSI2024/hw2/P76131084/src/AXI+/home/LiauYiShang/VLSI2024/hw2/P76131084/include+/home/LiauYiShang/VLSI2024/hw2/P76131084/sim
++define+prog0
+-define
+CYCLE=9.0
+-define
+MAX=300000
++access+r
++nc64bit
++prog_path=/home/LiauYiShang/VLSI2024/hw2/P76131084/sim/prog0
++rdcycle=1
++notimingcheck

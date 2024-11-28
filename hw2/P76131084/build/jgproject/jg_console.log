@@ -1,0 +1,63 @@
+2024-10-17 14:51:09.293122 (2903756) main____ INFO    ----------------------------------------
+2024-10-17 14:51:09.293214 (2903756) main____ INFO    JasperGold version info
+2024-10-17 14:51:09.293233 (2903756) main____ INFO      tool      : JasperGold 2021.03
+2024-10-17 14:51:09.293248 (2903756) main____ INFO      version   : 2021.03 FCS 64 bits
+2024-10-17 14:51:09.293261 (2903756) main____ INFO      build date: 2021.03.23 02:50:43 UTC
+2024-10-17 14:51:09.293273 (2903756) main____ INFO    ----------------------------------------
+2024-10-17 14:51:09.293284 (2903756) main____ INFO    Runtime info:
+2024-10-17 14:51:09.293296 (2903756) main____ INFO      platform  : Linux 5.15.0-113-generic x86_64
+2024-10-17 14:51:09.293311 (2903756) main____ INFO      hostname  : caidcpuserver0
+2024-10-17 14:51:09.293324 (2903756) main____ INFO      pid       : 2903756
+2024-10-17 14:51:09.293336 (2903756) main____ INFO      arguments : '-style' 'windows' '../script/jg_bridge.tcl'
+2024-10-17 14:51:09.293349 (2903756) main____ INFO      locale    : UTF-8
+2024-10-17 14:51:09.293360 (2903756) main____ INFO    ----------------------------------------
+2024-10-17 14:51:09.293372 (2903756) main____ INFO    System resource limits info:
+2024-10-17 14:51:09.293384 (2903756) main____ INFO      virtual memory: unlimited
+2024-10-17 14:51:09.293396 (2903756) main____ INFO      cpu time      : unlimited
+2024-10-17 14:51:09.293414 (2903756) main____ INFO      stack size    : 8388608 B
+2024-10-17 14:51:09.293429 (2903756) main____ INFO      core file size: 0 B
+2024-10-17 14:51:09.293445 (2903756) main____ INFO      open files    : 1024
+2024-10-17 14:51:09.293458 (2903756) main____ INFO      file size     : unlimited
+2024-10-17 14:51:09.293470 (2903756) main____ INFO    ----------------------------------------
+2024-10-17 14:51:09.293481 (2903756) main____ INFO    Memory statistics:
+2024-10-17 14:51:09.293493 (2903756) main____ INFO      total physical memory  : 47348556 kB
+2024-10-17 14:51:09.293504 (2903756) main____ INFO      free physical memory   : 8590156 kB
+2024-10-17 14:51:09.293516 (2903756) main____ INFO      committed address space: 8278312 kB
+2024-10-17 14:51:09.293527 (2903756) main____ INFO    ----------------------------------------
+2024-10-17 14:51:09.294917 (2903756) main____ INFO    Important environment variables:
+2024-10-17 14:51:09.294948 (2903756) main____ INFO      DISPLAY           : 'localhost:13.0'
+2024-10-17 14:51:09.294965 (2903756) main____ INFO      JASPER_INSTALL_DIR: '/home/nfs_cad/cadence/JASPER/jasper_2021.03'
+2024-10-17 14:51:09.294984 (2903756) main____ INFO      LANG              : 'en_US.UTF-8'
+2024-10-17 14:51:09.294999 (2903756) main____ INFO      LC_ADDRESS        : 'lzh_TW'
+2024-10-17 14:51:09.295014 (2903756) main____ INFO      LC_IDENTIFICATION : 'lzh_TW'
+2024-10-17 14:51:09.295028 (2903756) main____ INFO      LC_MEASUREMENT    : 'lzh_TW'
+2024-10-17 14:51:09.295043 (2903756) main____ INFO      LC_MONETARY       : 'lzh_TW'
+2024-10-17 14:51:09.295057 (2903756) main____ INFO      LC_NAME           : 'lzh_TW'
+2024-10-17 14:51:09.295070 (2903756) main____ INFO      LC_NUMERIC        : 'lzh_TW'
+2024-10-17 14:51:09.295084 (2903756) main____ INFO      LC_PAPER          : 'lzh_TW'
+2024-10-17 14:51:09.295098 (2903756) main____ INFO      LC_TELEPHONE      : 'lzh_TW'
+2024-10-17 14:51:09.295112 (2903756) main____ INFO      LC_TIME           : 'lzh_TW'
+2024-10-17 14:51:09.295127 (2903756) main____ INFO      LM_LICENSE_FILE   : '1717@lstc:1717@lstn:1717@lshc:26585@lshc:26585@lstc:26585@lstn:5280@lstn:5280@lshc:5280@lstc'
+2024-10-17 14:51:09.295139 (2903756) main____ INFO    ----------------------------------------
+2024-10-17 14:51:09.295698 (2903756) lic_core INFO    Initializing license system ...
+2024-10-17 14:51:09.308749 (2903756) lic_core INFO    ... license system initialized.
+2024-10-17 14:51:09.310254 (2903756) lic__man INFO    Claim 'main' for <ui>.
+2024-10-17 14:51:09.310303 (2903756) lic_core INFO    (1) checking out 'jasper_interactive' ...
+2024-10-17 14:51:09.481923 (2903756) lic_core INFO    ... (1) checkout succeeded
+2024-10-17 14:51:09.482028 (2903756) lic__man INFO    Claim 'fpv' for <ui>.
+2024-10-17 14:51:09.482066 (2903756) lic_core INFO    (2) checking out 'jasper_fpv' ...
+2024-10-17 14:51:09.629909 (2903756) lic_core INFO    ... (2) checkout failed (error: -5) ("FLEXnet ERROR(-5, 0, 0): No such feature exists.")
+2024-10-17 14:51:09.629952 (2903756) lic_core INFO    (3) checking out 'jasper_fao' ...
+2024-10-17 14:51:09.800244 (2903756) lic_core INFO    ... (3) checkout succeeded
+2024-10-17 14:51:09.800910 (2903756) main____ INFO    Tool inactivity delay is 480000 ms.
+2024-10-17 14:51:11.060969 (2903756) lic__man INFO    Claim 'fpv' for <ui>.
+2024-10-17 14:51:11.499767 (2903756) lic__man INFO    Unclaim 'fpv' for <ui>.
+2024-10-17 14:51:11.499847 (2903756) lic__man INFO    Claim 'fpv' for <ui>.
+2024-10-17 14:51:11.506871 (2903756) session_ INFO    Starting analysis session with session id 'session_0' (launcher: <local>) ...
+2024-10-17 14:51:11.509890 (2903756) session_ INFO    Analysis session with session id 'session_0' started (pid: 2903785)
+2024-10-17 14:51:13.258922 (2903756) session_ INFO    Analysis session 'session_0' connected to the console (host: 127.0.0.1:44684)
+2024-10-17 14:51:24.682519 (2903756) main____ INFO    About to exit: requested from GUI
+2024-10-17 14:51:24.955736 (2903756) session_ INFO    Analysis session 'session_0' disconnected.
+2024-10-17 14:51:24.977366 (2903756) lic_core INFO    (1) checkin jasper_interactive
+2024-10-17 14:51:24.980663 (2903756) lic_core INFO    (3) checkin jasper_fao
+2024-10-17 14:51:24.984902 (2903756) main____ INFO    Exiting with status 0.

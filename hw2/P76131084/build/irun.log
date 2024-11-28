@@ -1,0 +1,102 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Nov 11, 2024 at 13:15:22 CST
+irun
+	/home/LiauYiShang/VLSI2024/hw2/P76131084/sim/top_tb.sv
+	+incdir+/home/LiauYiShang/VLSI2024/hw2/P76131084/src+/home/LiauYiShang/VLSI2024/hw2/P76131084/src/AXI+/home/LiauYiShang/VLSI2024/hw2/P76131084/include+/home/LiauYiShang/VLSI2024/hw2/P76131084/sim
+	+define+prog0
+	-define CYCLE=9.0
+	-define MAX=300000
+	+access+r
+	+nc64bit
+	+prog_path=/home/LiauYiShang/VLSI2024/hw2/P76131084/sim/prog0
+	+rdcycle=1
+	+notimingcheck
+
+   User defined plus("+") options:
+	+prog_path=/home/LiauYiShang/VLSI2024/hw2/P76131084/sim/prog0
+	+rdcycle=1
+
+Loading snapshot worklib.top_tb:sv .................... Done
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+
+Done
+
+DM[   0] = fffffff0, pass
+DM[   1] = fffffff8, pass
+DM[   2] = 00000008, pass
+DM[   3] = 00000001, pass
+DM[   4] = 00000001, pass
+DM[   5] = 78787878, pass
+DM[   6] = 000091a2, pass
+DM[   7] = 00000003, pass
+DM[   8] = fefcfefd, pass
+DM[   9] = 10305070, pass
+DM[  10] = 8bfd6700, pass
+DM[  11] = 00000000, pass
+DM[  12] = 10200ffc, pass
+DM[  13] = f2a93e0c, pass
+DM[  14] = cccccccc, pass
+DM[  15] = ffffffcc, pass
+DM[  16] = ffffcccc, pass
+DM[  17] = 000000cc, pass
+DM[  18] = 0000cccc, pass
+DM[  19] = 00000d9d, pass
+DM[  20] = 00000004, pass
+DM[  21] = 00000003, pass
+DM[  22] = 000001a6, pass
+DM[  23] = 00000ec6, pass
+DM[  24] = 2468b7a8, pass
+DM[  25] = 5dbf9f00, pass
+DM[  26] = 00012b38, pass
+DM[  27] = fa2817b7, pass
+DM[  28] = ff000000, pass
+DM[  29] = 12345678, pass
+DM[  30] = 0000f000, pass
+DM[  31] = 00000f00, pass
+DM[  32] = 000000f0, pass
+DM[  33] = 0000000f, pass
+DM[  34] = 56780000, pass
+DM[  35] = 78000000, pass
+DM[  36] = 00005678, pass
+DM[  37] = 00000078, pass
+DM[  38] = 12345678, pass
+DM[  39] = ce780000, pass
+DM[  40] = fffff000, pass
+DM[  41] = fffff000, pass
+DM[  42] = fffff000, pass
+DM[  43] = fffff000, pass
+DM[  44] = fffff000, pass
+DM[  45] = fffff000, pass
+DM[  46] = 1357a274, pass
+DM[  47] = 13578000, pass
+DM[  48] = fffff004, pass
+DM[  49] = 40bb3276, pass
+DM[  50] = be3aa25e, pass
+DM[  51] = 40b55d63, pass
+DM[  52] = c213a0c4, pass
+DM[  53] = 40c10789, pass
+DM[  54] = 404c5a18, pass
+DM[  55] = 00000000, pass
+DM[  56] = 000013fb, pass
+your total cycle is 0.000000 
+your total cycle is 28550.000000 
+
+
+
+
+        ****************************               
+        **                        **       |__||  
+        **  Congratulations !!    **      / O.O  | 
+        **                        **    /_____   | 
+        **  Simulation PASS!!     **   /^ ^ ^ \  |
+        **                        **  |^ ^ ^ ^ |w| 
+        ****************************   \m___m__|_|
+
+
+Simulation complete via $finish(1) at time 257602500 PS + 1
+../sim/top_tb.sv:114     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on Nov 11, 2024 at 13:15:25 CST  (total: 00:00:03)

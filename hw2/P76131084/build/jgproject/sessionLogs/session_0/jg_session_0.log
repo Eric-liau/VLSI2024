@@ -1,0 +1,155 @@
+# ----------------------------------------
+# JasperGold Version Info
+# tool      : JasperGold 2021.03
+# platform  : Linux 5.15.0-113-generic
+# version   : 2021.03 FCS 64 bits
+# build date: 2021.03.23 02:50:43 UTC
+# ----------------------------------------
+# started   : 2024-10-17 14:51:12 CST
+# hostname  : caidcpuserver0.(none)
+# pid       : 2903785
+# arguments : '-label' 'session_0' '-console' '//127.0.0.1:33645' '-style' 'windows' '-data' 'AAAAdHicY2RgYLCp////PwMYMFcBCQEGHwZfhiAGVyDpzxAGpOGA8QGUYcMI4gGxHhjqMxQzJDMUMWQyFDCUAHlZDOkM8QxJYJEUIDsVqKYEqCIHpBcAy2IQWA==' '-proj' '/home/LiauYiShang/VLSI2024/hw2/P76131084/build/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/LiauYiShang/VLSI2024/hw2/P76131084/build/jgproject/.tmp/.initCmds.tcl' '../script/jg_bridge.tcl'
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2021 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc. 
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+JasperGold Apps Analysis Session - /home/LiauYiShang/VLSI2024/hw2/P76131084/build/jgproject/sessionLogs/session_0
+
+INFO: successfully checked out licenses "jasper_interactive" and "jasper_fao".
+INFO: reading configuration file "/home/LiauYiShang/.config/jasper/jaspergold.conf".
+% #DO NOT MODIFY THIS FILE
+% set ABVIP_INST_DIR /usr/cad/cadence/VIPCAT/cur/tools/abvip
+/usr/cad/cadence/VIPCAT/cur/tools/abvip
+% set vip_dir $::env(vip_dir)
+/home/LiauYiShang/VLSI2024/hw2/P76131084/vip
+% 
+% abvip -set_location $ABVIP_INST_DIR
+WARNING (WSW008): The directory "/usr/cad/cadence/VIPCAT/cur/tools/abvip" does not exist.
+% set_visualize_auto_load_debugging_tables on
+% analyze -f $vip_dir/bridge_duv/jg.f -sv09
+INFO (INL011): Processing "-f" file "/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/jg.f".
+WARNING (WSW008): The directory "/usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl" does not exist.
+WARNING (WNL074): Ignoring file "/usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/axi4_master.sv" in "-f" file "/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/jg.f" as it was not found.
+INFO (INL010): Use "set_message -error WNL066" and "set_message -error WNL074" commands to force the tool to show the ignored errors.
+WARNING (WNL074): Ignoring file "/usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/axi4_slave.sv" in "-f" file "/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/jg.f" as it was not found.
+INFO (INL010): Use "set_message -error WNL066" and "set_message -error WNL074" commands to force the tool to show the ignored errors.
+WARNING (WSW008): The directory "/usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl" does not exist.
+WARNING (WSW008): The directory "/usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl" does not exist.
+[-- (VERI-1482)] Analyzing Verilog file '/home/nfs_cad/cadence/JASPER/jasper_2021.03/lib/verilog/packages/std/std.sv' into library 'std'
+[-- (VERI-1482)] Analyzing Verilog file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/AXI.sv'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/AXI.sv(18): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/AXI.sv(20): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/address_channel.sv'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/address_channel.sv(1): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/address_channel.sv(3): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/Arbiter.sv'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/Arbiter.sv(1): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/address_channel.sv(4): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/Decoder.sv'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/Decoder.sv(1): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/AXI.sv(21): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/DR.sv'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/DR.sv(1): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/AXI.sv(22): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/DW.sv'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/DW.sv(1): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/AXI.sv(23): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/Write_Response.sv'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/Write_Response.sv(1): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/../../include/AXI_define.svh'
+[-- (VERI-1482)] Analyzing Verilog file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/top.v'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/top.v(21): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/../../include/AXI_define.svh'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/top.v(22): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/AXI.sv'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/AXI.sv(18): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/../../include/AXI_define.svh'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/AXI.sv(20): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/address_channel.sv'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/address_channel.sv(1): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/../../include/AXI_define.svh'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/address_channel.sv(3): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/Arbiter.sv'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/Arbiter.sv(1): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/../../include/AXI_define.svh'
+[WARN (VERI-1206)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/Arbiter.sv(103): overwriting previous definition of module 'Arbiter'
+[INFO (VERI-2142)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/Arbiter.sv(103): previous definition of design element 'Arbiter' is here
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/address_channel.sv(4): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/Decoder.sv'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/Decoder.sv(1): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/../../include/AXI_define.svh'
+[WARN (VERI-1206)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/Decoder.sv(31): overwriting previous definition of module 'Decoder'
+[INFO (VERI-2142)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/Decoder.sv(31): previous definition of design element 'Decoder' is here
+[WARN (VERI-1206)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/address_channel.sv(144): overwriting previous definition of module 'address_channel'
+[INFO (VERI-2142)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/address_channel.sv(144): previous definition of design element 'address_channel' is here
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/AXI.sv(21): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/DR.sv'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/DR.sv(1): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/../../include/AXI_define.svh'
+[WARN (VERI-1206)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/DR.sv(163): overwriting previous definition of module 'DR'
+[INFO (VERI-2142)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/DR.sv(163): previous definition of design element 'DR' is here
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/AXI.sv(22): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/DW.sv'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/DW.sv(1): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/../../include/AXI_define.svh'
+[WARN (VERI-1206)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/DW.sv(146): overwriting previous definition of module 'DW'
+[INFO (VERI-2142)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/DW.sv(146): previous definition of design element 'DW' is here
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/AXI.sv(23): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/Write_Response.sv'
+[INFO (VERI-1328)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/Write_Response.sv(1): analyzing included file '/home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/../../include/AXI_define.svh'
+[WARN (VERI-1206)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/Write_Response.sv(62): overwriting previous definition of module 'Write_Response'
+[INFO (VERI-2142)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/Write_Response.sv(62): previous definition of design element 'Write_Response' is here
+[WARN (VERI-1206)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/AXI.sv(372): overwriting previous definition of module 'AXI'
+[INFO (VERI-2142)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/../src/AXI/AXI.sv(372): previous definition of design element 'AXI' is here
+[WARN (VERI-9025)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/top.v(24): Empty Port in Module Declaration
+% elaborate -top top -param top.axi_master_0.READONLY_INTERFACE 1 -param top.axi_master_1.READONLY_INTERFACE 0\
+-param top.axi_master_0.MAX_PENDING 1 -param top.axi_master_1.MAX_PENDING 1\
+-param top.axi_slave_0.MAX_PENDING 1 -param top.axi_slave_1.MAX_PENDING 1\
+
+INFO (ISW003): Top module name is "top".
+[WARN (VERI-1927)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/AXI.sv(312): port 'READY_M0' remains unconnected for this instance
+[INFO (VERI-1018)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/Arbiter.sv(2): compiling module 'Arbiter'
+[WARN (VERI-1899)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/Arbiter.sv(50): 'handshake1' inside always_comb block does not represent combinational logic
+[INFO (VERI-1018)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/Decoder.sv(2): compiling module 'Decoder'
+[INFO (VERI-1018)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/address_channel.sv(6): compiling module 'address_channel'
+[INFO (VERI-1018)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/DR.sv(2): compiling module 'DR'
+[INFO (VERI-1018)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/DW.sv(2): compiling module 'DW'
+[WARN (VERI-1899)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/DW.sv(121): 'last_s0' inside always_comb block does not represent combinational logic
+[INFO (VERI-1018)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/Write_Response.sv(2): compiling module 'Write_Response'
+[INFO (VERI-1018)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/AXI.sv(25): compiling module 'AXI'
+[WARN (VERI-9028)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/AXI.sv(267): missing/open ports on instance AW of module address_channel
+[INFO (VERI-1018)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/top.v(24): compiling module 'top'
+[WARN (VERI-1063)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/top.v(418): instantiating unknown module 'axi4_slave'
+[WARN (VERI-1063)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/top.v(559): instantiating unknown module 'axi4_master'
+[WARN (VERI-1063)] /home/LiauYiShang/VLSI2024/hw2/P76131084/vip/bridge_duv/top.v(628): instantiating unknown module 'axi4_master'
+ERROR (ENL058): Unable to elaborate module/entity "axi4_slave" because this module/entity is missing or it contains errors.
+    Re-analyze it or use "-bbox_m axi4_slave" if you want to black box this module/entity.
+WARNING (WNL059): If you are analyzing with "-mfcu" or "-sfcu" and "-L", try using "elaborate -L libname", "set_analyze_libunboundsearch" or "analyze +libunboundsearch"
+ERROR (ENL058): Unable to elaborate module/entity "axi4_master" because this module/entity is missing or it contains errors.
+    Re-analyze it or use "-bbox_m axi4_master" if you want to black box this module/entity.
+WARNING (WNL059): If you are analyzing with "-mfcu" or "-sfcu" and "-L", try using "elaborate -L libname", "set_analyze_libunboundsearch" or "analyze +libunboundsearch"
+[ERROR (VDB-9017)] Module work.top could not be elaborated
+Summary of errors detected:
+	ERROR (ENL058): Unable to elaborate module/entity "axi4_slave" because this module/entity is missing or it contains errors.
+    Re-analyze it or use "-bbox_m axi4_slave" if you want to black box this module/entity.
+	ERROR (ENL058): Unable to elaborate module/entity "axi4_master" because this module/entity is missing or it contains errors.
+    Re-analyze it or use "-bbox_m axi4_master" if you want to black box this module/entity.
+	[ERROR (VDB-9017)] Module work.top could not be elaborated
+ERROR (ENL034): 3 errors detected in the design file(s).
+
+ERROR: problem encountered at line 8 in file ../script/jg_bridge.tcl
+
+INFO (IPL005): Received request to exit from the console.
+INFO (IPL014): Waiting for the Tcl-thread to exit.
+INFO (IPL018): The peak resident set memory use for this session was 0.416 GB.
+INFO (IPL015): The Tcl-thread exited with status 0.
+INFO (IPL016): Exiting the analysis session with status 0.

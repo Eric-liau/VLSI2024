@@ -1,0 +1,6 @@
+`include "AXI/DR.sv"
+`include "AXI/address_channel.sv"
+`include "AXI/DW.sv"
+`include "AXI/Write_Response.sv"
+`include "AXI/Arbiter.sv"
+`include "AXI/Decoder.sv"
