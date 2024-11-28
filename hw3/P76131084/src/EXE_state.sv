@@ -108,14 +108,12 @@ end
 
 
 //forwarding
-
 assign EXE_rs1_same = (EXE_isfloat_rd == isfloat_rs1);
 assign EXE_rs2_same = (EXE_isfloat_rd == isfloat_rs2);
 assign MEM_rs1_same = (MEM_isfloat_rd == isfloat_rs1);
 assign MEM_rs2_same = (MEM_isfloat_rd == isfloat_rs2);
 
 always_comb begin
-    
     if(EXE_rs1_same && EXE_rd_adr == rs1_adr && EXE_RegWrite && !EXE_MemRead) 
         reg1_data = EXE_rd_data;
     else if(MEM_rs1_same && MEM_rd_adr == rs1_adr && MEM_RegWrite) begin        
@@ -132,6 +130,8 @@ always_comb begin
     else 
         reg2_data = rs2_data;
 end
+
+
 always_comb begin
     case(ALU_result[1:0])
         2'b01:begin

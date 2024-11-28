@@ -108,13 +108,16 @@ rtl3: | $(bld_dir)
 	fi; \
 	make -C $(sim_dir)/prog3/; \
 	cd $(bld_dir); \
-	vcs -R -sverilog $(root_dir)/$(sim_dir)/top_tb_WDT.sv -debug_access+all -full64 -debug_region +cell +memcbk \
+	irun $(root_dir)/$(sim_dir)/top_tb.sv \
 	+incdir+$(root_dir)/$(src_dir)+$(root_dir)/$(src_dir)/AXI+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
 	+define+prog3$(FSDB_DEF) \
 	+define+CYCLE=$(CYCLE) \
 	+define+CYCLE2=$(CYCLE2) \
 	+define+MAX=$(MAX) \
+	+access+r \
+	+nc64bit \
 	+prog_path=$(root_dir)/$(sim_dir)/prog3 \
+	+rdcycle=1 \
 	+notimingcheck
 	
 rtl4: | $(bld_dir)
@@ -124,13 +127,16 @@ rtl4: | $(bld_dir)
 	fi; \
 	make -C $(sim_dir)/prog4/; \
 	cd $(bld_dir); \
-	vcs -R -sverilog $(root_dir)/$(sim_dir)/top_tb_WDT.sv -debug_access+all -full64 -debug_region +cell +memcbk \
+	irun $(root_dir)/$(sim_dir)/top_tb.sv \
 	+incdir+$(root_dir)/$(src_dir)+$(root_dir)/$(src_dir)/AXI+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
 	+define+prog4$(FSDB_DEF) \
 	+define+CYCLE=$(CYCLE) \
 	+define+CYCLE2=$(CYCLE2) \
 	+define+$(MAX) \
+	+access+r \
+	+nc64bit \
 	+prog_path=$(root_dir)/$(sim_dir)/prog4 \
+	+rdcycle=1 \
 	+notimingcheck
 rtl5: | $(bld_dir)
 	@if [ $$(echo $(CYCLE) '>' 10.0 | bc -l) -eq 1 ]; then \
@@ -139,13 +145,16 @@ rtl5: | $(bld_dir)
 	fi; \
 	make -C $(sim_dir)/prog5/; \
 	cd $(bld_dir); \
-	vcs -R -sverilog $(root_dir)/$(sim_dir)/top_tb.sv -debug_access+all -full64  \
+	irun $(root_dir)/$(sim_dir)/top_tb.sv \
 	+incdir+$(root_dir)/$(src_dir)+$(root_dir)/$(src_dir)/AXI+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
 	+define+prog5$(FSDB_DEF) \
 	+define+CYCLE=$(CYCLE) \
 	+define+CYCLE2=$(CYCLE2) \
 	+define+MAX=$(MAX) \
+	+access+r \
+	+nc64bit \
 	+prog_path=$(root_dir)/$(sim_dir)/prog5 \
+	+rdcycle=1 \
 	+notimingcheck
 
 

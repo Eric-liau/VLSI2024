@@ -291,12 +291,17 @@ case(op)
     CSR:begin
         //EXE
         case(funct3[2])
-            1'b0 : immtype = 3'b001;
-            1'b1 : immtype = 3'b110;
+            1'b0 : begin
+                immtype = 3'b001;
+                ALUSrc = 1'b0;
+            end
+            1'b1 : begin
+                immtype = 3'b110;
+                ALUSrc = 1'b0;
+            end
         endcase
         ALUop = CSR_type;
         RegDst = 1'b1;
-        ALUSrc = 1'b1;
         //MEM 
         Branch = 1'b0;
         MemWrite = 4'b1111;

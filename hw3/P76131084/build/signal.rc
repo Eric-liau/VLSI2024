@@ -16,16 +16,16 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 299429972.888074 299736290.667891
-cursor 299552500.000000
+zoom 301279656.999083 301585974.778900
+cursor 301367500.000000
 marker 0.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
-top 0
+top 39
 ; marker line index
-markerPos 126
+markerPos 69
 
 ; event list
 ; addEvent event_name event_expression
@@ -55,7 +55,7 @@ addSignal -h 15 -holdScope rst
 addSignal -h 15 -holdScope stall
 addSignal -h 15 -holdScope IM_stall
 addSignal -h 15 -holdScope DM_stall
-addSubGroup "ID" -e FALSE
+addSubGroup "ID"
 addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/ID_state/instr[31:0]
 addSignal -h 15 -holdScope pc_in[31:0]
 addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/ID_state/register/val1[31:0]
@@ -65,18 +65,59 @@ addSignal -h 15 -holdScope rs1[4:0]
 addSignal -h 15 -holdScope rs2[4:0]
 addSignal -h 15 -holdScope rd[4:0]
 addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/ID_state/WB_pc_in[31:0]
-addSignal -h 15 -UNSIGNED -HEX /top_tb/TOP/CPU_wrapper/cpu/ID_state/register/reg_file[31:0]
+addSignal -expanded -h 15 -UNSIGNED -HEX /top_tb/TOP/CPU_wrapper/cpu/ID_state/register/reg_file[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[31][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[30][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[29][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[28][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[27][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[26][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[25][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[24][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[23][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[22][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[21][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[20][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[19][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[18][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[17][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[16][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[15][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[14][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[13][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[12][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[11][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[10][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[9][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[8][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[7][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[6][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[5][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[4][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[3][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[2][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[1][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[0][31:0]
 endSubGroup "ID"
-addGroup "EXE" -e FALSE
-addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/EXE_state/rs2_data_EXE[31:0]
-addSignal -h 15 -holdScope pc_in[31:0]
+addGroup "CSR_reg"
+addSignal -expanded -h 15 -UNSIGNED -HEX /top_tb/TOP/CPU_wrapper/cpu/ID_state/register/CSR_reg[8:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope CSR_reg[8][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope CSR_reg[7][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope CSR_reg[6][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope CSR_reg[5][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope CSR_reg[4][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope CSR_reg[3][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope CSR_reg[2][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope CSR_reg[1][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope CSR_reg[0][31:0]
+addGroup "EXE"
+addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/EXE_state/pc_in[31:0]
+addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/EXE_state/ALU/ALUctl[4:0]
+addSignal -h 15 -holdScope data1[31:0]
+addSignal -h 15 -holdScope data2[31:0]
+addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/EXE_state/rs2_data[31:0]
 addSignal -h 15 -holdScope reg2_data[31:0]
-addSignal -h 15 -holdScope rs2_data[31:0]
-addSignal -h 15 -holdScope DM_stall
-addSignal -h 15 -holdScope flush
-addSignal -h 15 -holdScope isMemWrite_ID
-addSignal -h 15 -holdScope result[31:0]
-addGroup "CPU_wrapper" -e FALSE
+addGroup "CPU_wrapper"
 addSignal -h 15 /top_tb/TOP/CPU_wrapper/Memadr[31:0]
 addSignal -h 15 -holdScope store_data[31:0]
 addGroup "master0" -e FALSE
@@ -310,7 +351,7 @@ addSignal -h 15 -holdScope BVALID
 addSignal -h 15 -holdScope RDATA[31:0]
 addSignal -h 15 -holdScope WDATA[31:0]
 addSignal -h 15 -holdScope data[31:0]
-addGroup "G17"
+addGroup "G18"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm
@@ -333,6 +374,7 @@ getSignalForm close
 "/top_tb/TOP/CPU_wrapper"
 "/top_tb/TOP/CPU_wrapper/cpu"
 "/top_tb/TOP/CPU_wrapper/cpu/EXE_state"
+"/top_tb/TOP/CPU_wrapper/cpu/EXE_state/ALU"
 "/top_tb/TOP/CPU_wrapper/cpu/ID_state"
 "/top_tb/TOP/CPU_wrapper/cpu/ID_state/register"
 "/top_tb/TOP/CPU_wrapper/master1"
@@ -377,6 +419,7 @@ SCOPE_LIST_BEGIN
 "/top_tb/TOP/AXI/AR/Address_Arbiter"
 "/top_tb/TOP/DM1/i_SRAM"
 "/top_tb/TOP/CPU_wrapper/cpu/ID_state/immGenerator"
+"/top_tb/TOP/CPU_wrapper/cpu/EXE_state/ALU"
 SCOPE_LIST_END
 
 GETSIGNALFORM_SCOPE_HIERARCHY_END
