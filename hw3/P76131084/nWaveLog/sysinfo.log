@@ -1,0 +1,469 @@
+==========	uname -a	==========
+Linux superdome1 3.10.0-1160.el7.x86_64 #1 SMP Tue Aug 18 14:50:17 EDT 2020 x86_64 x86_64 x86_64 GNU/Linux
+-------------	end(uname -a)     -------------
+
+==========	limit		==========
+cputime      unlimited
+filesize     unlimited
+datasize     unlimited
+stacksize    8192 kbytes
+coredumpsize 0 kbytes
+memoryuse    unlimited
+vmemoryuse   unlimited
+descriptors  4096 
+memorylocked 64 kbytes
+maxproc      4096 
+maxlocks     unlimited
+maxsignal    4125638 
+maxmessage   819200 
+maxnice      0 
+maxrtprio    0 
+maxrttime    unlimited
+-------------	end(limit)     -------------
+==========	xdpyinfo	==========
+name of display:    localhost:26.0
+version number:    11.0
+vendor string:    NetSarang Computer, Inc.
+vendor release number:    5033
+maximum request size:  16777212 bytes
+motion buffer size:  256
+bitmap unit, bit order, padding:    32, LSBFirst, 32
+image byte order:    LSBFirst
+number of supported pixmap formats:    7
+supported pixmap formats:
+    depth 1, bits_per_pixel 1, scanline_pad 32
+    depth 4, bits_per_pixel 4, scanline_pad 32
+    depth 8, bits_per_pixel 8, scanline_pad 32
+    depth 15, bits_per_pixel 16, scanline_pad 32
+    depth 16, bits_per_pixel 16, scanline_pad 32
+    depth 24, bits_per_pixel 32, scanline_pad 32
+    depth 32, bits_per_pixel 32, scanline_pad 32
+keycode range:    minimum 8, maximum 255
+focus:  window 0x8002a3, revert to Parent
+number of extensions:    23
+    BIG-REQUESTS
+    DAMAGE
+    DEC-XTRAP
+    DOUBLE-BUFFER
+    DPMS
+    Extended-Visual-Information
+    GLX
+    MIT-SUNDRY-NONSTANDARD
+    RANDR
+    RECORD
+    RENDER
+    SECURITY
+    SGI-GLX
+    SHAPE
+    SYNC
+    TOG-CUP
+    X-Resource
+    XC-APPGROUP
+    XC-MISC
+    XFIXES
+    XFree86-Bigfont
+    XInputExtension
+    XTEST
+default screen number:    0
+number of screens:    1
+
+screen #0:
+  dimensions:    4480x1152 pixels (1185x305 millimeters)
+  resolution:    96x96 dots per inch
+  depths (17):    1, 4, 8, 8, 8, 8, 15, 16, 24, 24, 24, 24, 24, 24, 24, 24, 32
+  root window id:    0x58
+  depth of root window:    24 planes
+  number of colormaps:    minimum 16, maximum 128
+  default colormap:    0x20
+  default number of colormap cells:    256
+  preallocated pixels:    black 0, white 16777215
+  options:    backing-store NO, save-unders NO
+  largest cursor:    32x32
+  current input event mask:    0xf84030
+    EnterWindowMask          LeaveWindowMask          KeymapStateMask          
+    SubstructureNotifyMask   SubstructureRedirectMask FocusChangeMask          
+    PropertyChangeMask       ColormapChangeMask       
+  number of visuals:    16
+  default visual id:  0x29
+  visual:
+    visual id:    0x21
+    class:    PseudoColor
+    depth:    8 planes
+    available colormap entries:    256
+    red, green, blue masks:    0x0, 0x0, 0x0
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x22
+    class:    DirectColor
+    depth:    8 planes
+    available colormap entries:    8 per subfield
+    red, green, blue masks:    0x7, 0x38, 0xc0
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x23
+    class:    GrayScale
+    depth:    8 planes
+    available colormap entries:    256
+    red, green, blue masks:    0x0, 0x0, 0x0
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x24
+    class:    StaticColor
+    depth:    8 planes
+    available colormap entries:    256
+    red, green, blue masks:    0x0, 0x0, 0x0
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x25
+    class:    StaticGray
+    depth:    8 planes
+    available colormap entries:    256
+    red, green, blue masks:    0x0, 0x0, 0x0
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x26
+    class:    PseudoColor
+    depth:    8 planes
+    available colormap entries:    256
+    red, green, blue masks:    0x0, 0x0, 0x0
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x27
+    class:    PseudoColor
+    depth:    8 planes
+    available colormap entries:    256
+    red, green, blue masks:    0x0, 0x0, 0x0
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x28
+    class:    PseudoColor
+    depth:    8 planes
+    available colormap entries:    256
+    red, green, blue masks:    0x0, 0x0, 0x0
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x29
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x2a
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x2b
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x2c
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x2d
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x2e
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x2f
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x30
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+-------------	end(xdpyinfo)     -------------
+==========	Environment Variables	==========
+REMOTEHOST=lpvlsi.ee.ncku.edu.tw
+SYNOPSYS_LC_ROOT=/usr/cad/synopsys/lc/cur/bin
+MANPATH=/usr/cad/synopsys/lc/2021.06-sp1//doc/lc/man:/usr/cad/synopsys/synthesis/cur/doc/syn/man:/usr/cad/synopsys/star-rcxt/2023.12-sp2//starrc/man
+NOVAS_USE_VERDI_LICENSE=1
+TMIARCH=RH_64
+XDG_SESSION_ID=25088
+XLOCALEDIR=/usr/cad/synopsys/icc2/2020.09-sp3//etc/locale
+HOSTNAME=superdome1
+XKEYSYMDB=/usr/cad/synopsys/verdi/cur/etc/access/XKeysymDB2.1
+SIGNAL_BASE_EXTRACTION=1
+SELINUX_ROLE_REQUESTED=
+NOVAS_SYNC_MOTIF_DISP=
+HOST=superdome1
+TERM=xterm
+SHELL=/bin/bash
+SSH_CLIENT=140.116.187.188 55897 22
+NOVAS_VERDI_SVTB_ALPHA=1
+SELINUX_USE_CURRENT_RANGE=
+SPS_FONT_PATH=/usr/cad/synopsys/verdi/cur/font
+CDS_LOAD_ENV=CSF
+MGC_LOCATION_MAP=NO_MAP
+HSP_GCC_VERSION=7.3.0
+QTDIR=/usr/lib64/qt-3.3
+SPS_XFONT_PATH=/usr/cad/synopsys/verdi/cur/XFont
+QTINC=/usr/lib64/qt-3.3/include
+SSH_TTY=/dev/pts/16
+LC_ALL=C
+SPAPI_AHDL_INCLUDE=/usr/cad/synopsys/hspice/2020.03-sp2-2/hspice/include
+QT_GRAPHICSSYSTEM_CHECKED=1
+HSP_HOME=/usr/cad/synopsys/hspice/2020.03-sp2-2/hspice
+GROUP=lphp
+USER=victor112
+LD_LIBRARY_PATH=/usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin:/usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt:/usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/tbb:/usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUXAMD64:/usr/cad/synopsys/verdi/cur/share/NPI/lib/LINUXAMD64:/usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/zebu:/usr/lib:/usr/lib64:/lib:/lib64::::/usr/cad/cadence/SPECTRE/SPECTRE_19.10.322//tools/lib/64bit:/usr/cad/cadence/SPECTRE/SPECTRE_19.10.322//tools/lib64:/usr/cad/cadence/SPECTRE/SPECTRE_19.10.322//tools/lib::/usr/cad/cadence/IC/IC_06.18.180/tools/lib:/usr/cad/cadence/IC/IC_06.18.180/tools/lib/64bit:/usr/cad/cadence/IC/IC_06.18.180/tools/lib64::/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/lib/64bit:/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/lib64:/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/lib::/usr/cad/cadence/INNOVUS/INNOVUS_20.15.000//tools/lib/64bit:/usr/cad/cadence/INNOVUS/INNOVUS_20.15.000//tools/lib64:/usr/cad/cadence/INNOVUS/INNOVUS_20.15.000//tools/lib:::/usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX64:/usr/cad/synopsys/verdi/cur/share/PLI/VCS/LINUX64:/usr/cad/synopsys/verdi/cur/share/PLI/MODELSIM/LINUX64:/usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/cur/share/PLI/VCS/LINUX64/:::/usr/cad/synopsys/star-rcxt/2023.12-sp2//linux64_starrc/lib/:::/usr/cad/synopsys/customcompiler/2020.12-sp1-2//linux64/lib::::::/usr/cad/synopsys/milkyway/2022.12-sp6//lib/linux64/:
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:
+XNLSPATH=/usr/cad/synopsys/verdi/cur/etc/access/nls
+TCL_LIBRARY=/usr/cad/synopsys/verdi/cur/etc/access/tcl86_library
+installdir=/usr/cad/synopsys/hspice/2020.03-sp2-2/hspice
+HOSTTYPE=x86_64-linux
+MALLOC_ARENA_MAX=1
+CMIARCH=RH_64
+SYNOPSYS_NCX_ROOT=/usr/cad/synopsys/star-rcxt/2023.12-sp2/
+VC_STATIC_HOME=/usr/cad/synopsys/vc_formal/cur/
+NOVAS_TCL_LIBRARY=/usr/cad/synopsys/verdi/cur/etc/access/tcl86_library
+NOVAS_VERDI_SVTB_BETA=1
+MAIL=/var/spool/mail/victor112
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/RISCV/bin:/usr/cad/mentor/calibre/aoi_cal_2019.2_26.18//bin:/usr/cad/mentor/modelsim/2023.3/modeltech/bin:/usr/cad/cadence/JASPER/jasper_2018.03p001//bin:/usr/cad/cadence/SPECTRE/SPECTRE_19.10.322//tools/bin/64bit:/usr/cad/cadence/SPECTRE/SPECTRE_19.10.322//tools/dfII/bin/64bit:/usr/cad/cadence/SPECTRE/SPECTRE_19.10.322//tools/bin:/usr/cad/cadence/SPECTRE/SPECTRE_19.10.322//tools/dfII/bin:/usr/cad/cadence/IC/IC_06.18.180/tools/bin:/usr/cad/cadence/IC/IC_06.18.180/tools/dracula/bin:/usr/cad/cadence/IC/IC_06.18.180/tools/dfII/bin:/usr/cad/cadence/IC/IC_06.18.180/tools/bin/64bit:/usr/cad/cadence/IC/IC_06.18.180/tools/dracula/bin/64bit:/usr/cad/cadence/IC/IC_06.18.180/tools/dfII/bin/64bit:/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/bin/64bit:/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/bin:/usr/cad/cadence/INNOVUS/INNOVUS_20.15.000//tools/bin/64bit:/usr/cad/cadence/INNOVUS/INNOVUS_20.15.000//tools/bin:/usr/cad/synopsys/vcs/cur/bin:/usr/cad/synopsys/vcs/cur/amd64/bin:/usr/cad/synopsys/vcs/cur/amd64/util:/usr/cad/synopsys/vcs/cur/amd64/flexlm:/usr/cad/synopsys/spyglass/2023.03//SPYGLASS_HOME/bin:/usr/cad/synopsys/verdi/cur/bin:/usr/cad/synopsys/verdi/cur/nLint/bin:/usr/cad/synopsys/primetime/2019.03-sp5-1//amd64/syn/bin:/usr/cad/synopsys/adp/cur/bin:/usr/cad/synopsys/icvalidator/2021.06-sp2//bin/LINUX64_L31el:/usr/cad/synopsys/icvalidator/2021.06-sp2//bin:/usr/cad/synopsys/star-rcxt/2023.12-sp2//bin:/usr/cad/synopsys/customexplorer/cur/bin:/usr/cad/synopsys/hspice/2020.03-sp2-2/hspice/bin:/usr/cad/synopsys/hspice/2020.03-sp2-2/hspice/GNU/linux64/gcc/bin:/usr/cad/synopsys/hspice/2020.03-sp2-2/hspice/linux64:/usr/bin:/usr/ucb/bin:/usr/cad/synopsys/hspice/2020.03-sp2-2//hspice/bin:/usr/cad/synopsys/customcompiler/2020.12-sp1-2//bin:/usr/cad/synopsys/customcompiler/2020.12-sp1-2//primewave/bin:/usr/bin/X11:/usr/cad/synopsys/coreConsultant/cur/bin:/usr/cad/synopsys/synthesis/cur/amd64/syn/bin:/usr/cad/synopsys/lc/cur/bin:/usr/cad/synopsys/lc/2021.06-sp1//bin:/usr/cad/synopsys/vc_formal/cur/bin:/usr/cad/synopsys/euclide/2023.03-sp2//bin:/usr/cad/synopsys/icc2/2020.09-sp3//bin:/usr/cad/synopsys/icc/2022.12-sp6//amd64/syn/bin:/usr/cad/synopsys/milkyway/2022.12-sp6//bin/linux64:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+FLEXLM_BORROWFILE=/home/user2/ms112/victor112/.superdome1-borrow.txt
+CALIBRE_HOME=/usr/cad/mentor/calibre/aoi_cal_2019.2_26.18/
+VERDI_HOME=/usr/cad/synopsys/verdi/cur
+PWD=/home/user2/ms112/victor112/Downloads/Desktop/HW3_AVSD
+VCS_HOME=/usr/cad/synopsys/vcs/cur
+XMODIFIERS=@im=none
+LANG=C
+SYS_PROG_NAME=nWave
+Laker_TCL_ToolBox=1
+VERDI_TB_HT=1
+SYNTHESIS=/usr/cad/synopsys/synthesis/cur
+SELINUX_LEVEL_REQUESTED=
+CDSHOME=/usr/cad/cadence/IC/IC_06.18.180
+USE_VERDI_LICENSE=1
+CDS_Netlisting_Mode=Analog
+SYNOPSYS=/usr/cad/synopsys/synthesis/cur/
+LM_LICENSE_FILE=5280@vlsicad8:1717@lstn:1717@lstc:1717@lshc:5280@lstn:5280@lstc:5280@lshc:26585@lstn:26585@lstc:26585@lshc:
+SYS_INST_DIR=/usr/cad/synopsys/verdi/cur
+HSP_GCC=/usr/cad/synopsys/hspice/2020.03-sp2-2/hspice/GNU/linux64/gcc/bin/gcc -m64 
+SHLVL=4
+HOME=/home/user2/ms112/victor112
+OSTYPE=linux
+MGC_HOME=/usr/cad/mentor/calibre/aoi_cal_2019.2_26.18/
+Laker_TCL_L3=1
+CDS_AUTO_64BIT=ALL
+SYNOPSYS_SYSTYPE=LINUX64_L31el
+ICV_HOME_DIR=/usr/cad/synopsys/icvalidator/2021.06-sp2/
+VERDI_ORIGNAL_LD_LIBRARY_PATH=/usr/lib:/usr/lib64:/lib:/lib64::::/usr/cad/cadence/SPECTRE/SPECTRE_19.10.322//tools/lib/64bit:/usr/cad/cadence/SPECTRE/SPECTRE_19.10.322//tools/lib64:/usr/cad/cadence/SPECTRE/SPECTRE_19.10.322//tools/lib::/usr/cad/cadence/IC/IC_06.18.180/tools/lib:/usr/cad/cadence/IC/IC_06.18.180/tools/lib/64bit:/usr/cad/cadence/IC/IC_06.18.180/tools/lib64::/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/lib/64bit:/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/lib64:/usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/lib::/usr/cad/cadence/INNOVUS/INNOVUS_20.15.000//tools/lib/64bit:/usr/cad/cadence/INNOVUS/INNOVUS_20.15.000//tools/lib64:/usr/cad/cadence/INNOVUS/INNOVUS_20.15.000//tools/lib:::/usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX64:/usr/cad/synopsys/verdi/cur/share/PLI/VCS/LINUX64:/usr/cad/synopsys/verdi/cur/share/PLI/MODELSIM/LINUX64:/usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/cur/share/PLI/VCS/LINUX64/:::/usr/cad/synopsys/star-rcxt/2023.12-sp2//linux64_starrc/lib/:::/usr/cad/synopsys/customcompiler/2020.12-sp1-2//linux64/lib::::::/usr/cad/synopsys/milkyway/2022.12-sp6//lib/linux64/:
+VERDI_SVTB_ALPHA=1
+SNPS_64=1
+EUCLIDE_HOME=/usr/cad/synopsys/euclide/2023.03-sp2/
+MGC_TMPDIR=/tmp
+SNPS_PLATFORM=linux64
+HSP_SIGMA_AMP=/usr/cad/synopsys/hspice/2020.03-sp2-2/hspice/linux64/python/Omega/Omega
+VENDOR=unknown
+MACHTYPE=x86_64
+LOGNAME=victor112
+QTLIB=/usr/lib64/qt-3.3/lib
+VERDI_SVTB_BETA=1
+XDG_DATA_DIRS=/home/user2/ms112/victor112/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+SSH_CONNECTION=140.116.187.188 55897 192.168.200.248 22
+mraarch=linux_64
+SPS_RGB_PATH=/usr/cad/synopsys/verdi/cur/etc/rgb
+NOVASHLPPATH=/usr/cad/synopsys/verdi/cur/doc
+NOVAS_LC_ALL=C
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+SHLIB_PATH=/usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUX64/:
+CDPL_HOME=/usr/cad/synopsys/hspice/2020.03-sp2-2/hspice/cdpl
+XDG_RUNTIME_DIR=/run/user/1885
+DISPLAY=localhost:26.0
+LD_NOVERSION=1
+SYN_MAN_DIR=/usr/cad/synopsys/star-rcxt/2023.12-sp2//starrc/man
+QT_PLUGIN_PATH=/usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/plugins
+NOVAS_SIGNAL_BASE_EXTRACTION=1
+NOVAS_VERDI_TB_HT=1
+_=/usr/cad/synopsys/verdi/cur/etc/access/sysinfo.sh
+-------------	end(env)     -------------
+==========	ps	    ==========
+   PID TTY          TIME CMD
+ 21068 pts/16   00:00:00 sysinfo.sh
+ 21081 pts/16   00:00:00 ps
+ 21322 pts/16   00:00:00 bash
+129023 pts/16   00:00:00 make
+129025 pts/16   00:00:00 sh
+129050 pts/16   00:00:00 vcs
+129897 pts/16   00:00:22 simv
+131495 pts/16   00:00:00 make
+131497 pts/16   00:00:00 sh
+131521 pts/16   00:00:00 vcs
+132392 pts/16   00:00:04 simv
+172438 pts/16   00:01:05 Novas
+190192 pts/16   00:00:33 Novas
+-------------	end(ps)     -------------
+==========       cat /proc/meminfo        ==========
+MemTotal:       1056384560 kB
+MemFree:        882250592 kB
+MemAvailable:   901930328 kB
+Buffers:         2531272 kB
+Cached:         17487868 kB
+SwapCached:        11868 kB
+Active:         132763844 kB
+Inactive:        8979412 kB
+Active(anon):   121874084 kB
+Inactive(anon):   141520 kB
+Active(file):   10889760 kB
+Inactive(file):  8837892 kB
+Unevictable:       22764 kB
+Mlocked:           22764 kB
+SwapTotal:      33553916 kB
+SwapFree:       32514588 kB
+Dirty:              1696 kB
+Writeback:             0 kB
+AnonPages:      121712592 kB
+Mapped:           648812 kB
+Shmem:            280820 kB
+Slab:            2371956 kB
+SReclaimable:    1532520 kB
+SUnreclaim:       839436 kB
+KernelStack:       79168 kB
+PageTables:       380276 kB
+NFS_Unstable:         12 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    561746196 kB
+Committed_AS:   175066660 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:     1996012 kB
+VmallocChunk:   33552068604 kB
+Percpu:            59904 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:  25389056 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:     1621752 kB
+DirectMap2M:    18063360 kB
+DirectMap1G:    1055916032 kB
+-------------	     end(cat /proc/meminfo)      -------------
+==========       xset -q      ==========
+Keyboard Control:
+  auto repeat:  on    key click percent:  0    LED mask:  00000000
+  auto repeating keys:  00fffffffffffb7f
+                        ff23f8ffff3f0000
+                        0000000000000000
+                        000000000000f07f
+  bell percent:  50    bell pitch:  400    bell duration:  100
+Pointer Control:
+  acceleration:  2/1    threshold:  4
+Screen Saver:
+  prefer blanking:  yes    allow exposures:  yes
+  timeout:  600    cycle:  600
+Colors:
+  default colormap:  0x20    BlackPixel:  0x0    WhitePixel:  0xffffff
+Font Path:
+  C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\Misc,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\75dpi,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\100dpi,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\Speedo,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\Type1,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\Korean,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\HP,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\IBM\75dpi,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\ISO8859-2\75dpi,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\ISO8859-3\75dpi,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\ISO8859-4\75dpi,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\ISO8859-5\75dpi,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\ISO8859-7\75dpi,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\ISO8859-8\75dpi,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\ISO8859-9\75dpi,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\ISO8859-10\75dpi,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\ISO8859-13\75dpi,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\ISO8859-14\75dpi,C:\Program Files (x86)\NetSarang\Xmanager Enterprise 5\fonts\ISO8859-15\75dpi
+Bug Mode: compatibility mode is enabled
+DPMS (Energy Star):
+  Display is not capable of DPMS
+-------------    end(xset -q)      -------------
+==========       show OS patch level     ==========
+\S
+Kernel \r on an \m
+
+-------------    end(show OS patch level)      -------------
+=========       uptime      ==========
+ 21:54:02 up 19 days, 19:09, 30 users,  load average: 82.67, 103.20, 110.98
+------------    end(uptime)    -------------
+=========       locale       ==========
+LANG=C
+LC_CTYPE="C"
+LC_NUMERIC="C"
+LC_TIME="C"
+LC_COLLATE="C"
+LC_MONETARY="C"
+LC_MESSAGES="C"
+LC_PAPER="C"
+LC_NAME="C"
+LC_ADDRESS="C"
+LC_TELEPHONE="C"
+LC_MEASUREMENT="C"
+LC_IDENTIFICATION="C"
+LC_ALL=C
+------------    end(locale)    -------------
+==========       ldd       ==========
+ldd /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/Novas
+	linux-vdso.so.1 =>  (0x00007ffdc57eb000)
+	libdl.so.2 => /usr/lib64/libdl.so.2 (0x00007f4d52731000)
+	libvfs.so => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/libvfs.so (0x00007f4d52ad5000)
+	libpsslanguage.so => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/libpsslanguage.so (0x00007f4d5176d000)
+	libRtxStable.so => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/zebu/libRtxStable.so (0x00007f4d52acb000)
+	libstdc++.so.6 => /usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUXAMD64/libstdc++.so.6 (0x00007f4d5138e000)
+	librtlappa_core-g.so => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/librtlappa_core-g.so (0x00007f4d5113f000)
+	libfreetype.so.6 => /usr/lib64/libfreetype.so.6 (0x00007f4d50e80000)
+	libxml2.so.2 => /usr/lib64/libxml2.so.2 (0x00007f4d50b16000)
+	libpthread.so.0 => /usr/lib64/libpthread.so.0 (0x00007f4d508fa000)
+	libtinfo.so.5 => /usr/lib64/libtinfo.so.5 (0x00007f4d506d0000)
+	librt.so.1 => /usr/lib64/librt.so.1 (0x00007f4d504c8000)
+	libm.so.6 => /usr/lib64/libm.so.6 (0x00007f4d501c6000)
+	libQtSolutions_MotifExtension-2.7.so.1 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtSolutions_MotifExtension-2.7.so.1 (0x00007f4d4ffb0000)
+	libQtGui.so.4 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtGui.so.4 (0x00007f4d4f40c000)
+	libQtCore.so.4 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4 (0x00007f4d4ef73000)
+	libQtXml.so.4 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtXml.so.4 (0x00007f4d4ed39000)
+	libQtWebKit.so.4 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtWebKit.so.4 (0x00007f4d4d428000)
+	libQtNetwork.so.4 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtNetwork.so.4 (0x00007f4d4d11a000)
+	libQt3Support.so.4 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQt3Support.so.4 (0x00007f4d4cc7a000)
+	libQtSql.so.4 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtSql.so.4 (0x00007f4d4ca44000)
+	libQtCommercialChart.so.1 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCommercialChart.so.1 (0x00007f4d4c713000)
+	libQtScript.so.4 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtScript.so.4 (0x00007f4d4c2a7000)
+	libutil.so.1 => /usr/lib64/libutil.so.1 (0x00007f4d4c0a4000)
+	libsimprofile_verdi.so => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/libsimprofile_verdi.so (0x00007f4d4bea5000)
+	libsnpsmalloc.so => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/libsnpsmalloc.so (0x00007f4d52a8a000)
+	libuuid.so.1 => /usr/lib64/libuuid.so.1 (0x00007f4d4bca0000)
+	libtbb.so.2 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/tbb/libtbb.so.2 (0x00007f4d52a47000)
+	libcmlp_cassandra-O.so => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/libcmlp_cassandra-O.so (0x00007f4d4b171000)
+	libXss.so.1 => /usr/lib64/libXss.so.1 (0x00007f4d4af6d000)
+	libXft.so.2 => /usr/lib64/libXft.so.2 (0x00007f4d4ad57000)
+	libXt.so.6 => /usr/lib64/libXt.so.6 (0x00007f4d4aaf0000)
+	libXmu.so.6 => /usr/lib64/libXmu.so.6 (0x00007f4d4a8d5000)
+	libX11.so.6 => /usr/lib64/libX11.so.6 (0x00007f4d4a597000)
+	libXext.so.6 => /usr/lib64/libXext.so.6 (0x00007f4d4a385000)
+	libfontconfig.so.1 => /usr/lib64/libfontconfig.so.1 (0x00007f4d4a143000)
+	libnsl.so.1 => /usr/lib64/libnsl.so.1 (0x00007f4d49f29000)
+	libnuma.so.1 => /usr/lib64/libnuma.so.1 (0x00007f4d49d1d000)
+	libpng12.so.0 => /usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUXAMD64/libpng12.so.0 (0x00007f4d49af7000)
+	libc.so.6 => /usr/lib64/libc.so.6 (0x00007f4d49729000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f4d52935000)
+	libz.so.1 => /usr/lib64/libz.so.1 (0x00007f4d49513000)
+	libexpat.so.1 => /usr/lib64/libexpat.so.1 (0x00007f4d492e9000)
+	libgcc_s.so.1 => /usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUXAMD64/libgcc_s.so.1 (0x00007f4d490d1000)
+	libbz2.so.1 => /usr/lib64/libbz2.so.1 (0x00007f4d48ec1000)
+	libpng15.so.15 => /usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUXAMD64/libpng15.so.15 (0x00007f4d48c96000)
+	liblzma.so.5 => /usr/lib64/liblzma.so.5 (0x00007f4d48a70000)
+	libSM.so.6 => /usr/lib64/libSM.so.6 (0x00007f4d48868000)
+	libICE.so.6 => /usr/lib64/libICE.so.6 (0x00007f4d4864c000)
+	libXrender.so.1 => /usr/lib64/libXrender.so.1 (0x00007f4d48441000)
+	libxcb.so.1 => /usr/lib64/libxcb.so.1 (0x00007f4d48219000)
+	libXau.so.6 => /usr/lib64/libXau.so.6 (0x00007f4d48015000)
+-------------    end(ldd)      -------------

@@ -1,0 +1,220 @@
+Thread 28 (Thread 0x7fb65e1e8700 (LWP 148623)):
+#0  0x00007fb6600e285d in nanosleep () from /usr/lib64/libc.so.6
+#1  0x00007fb6600e26f4 in sleep () from /usr/lib64/libc.so.6
+#2  0x0000000008f9a8f9 in LicenseCheckUtility ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 27 (Thread 0x7fb657f36700 (LWP 148668)):
+#0  0x00007fb6601129a3 in select () from /usr/lib64/libc.so.6
+#1  0x000000000bb6746a in NotifierThreadProc ()
+#2  0x000000000bbc77df in sdp_wrap_start_routine ()
+#3  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#4  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 26 (Thread 0x7fb657733700 (LWP 148755)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x00007fb6658ecb7b in QWaitCondition::wait(QMutex*, unsigned long) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#2  0x00007fb66634d6ce in QFileInfoGatherer::run() () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtGui.so.4
+#3  0x00007fb6658ec661 in QThreadPrivate::start(void*) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#4  0x000000000bbc77df in sdp_wrap_start_routine ()
+#5  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#6  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 25 (Thread 0x7fb656f32700 (LWP 148756)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x00007fb6658ecb7b in QWaitCondition::wait(QMutex*, unsigned long) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#2  0x00007fb66634d6ce in QFileInfoGatherer::run() () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtGui.so.4
+#3  0x00007fb6658ec661 in QThreadPrivate::start(void*) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#4  0x000000000bbc77df in sdp_wrap_start_routine ()
+#5  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#6  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 24 (Thread 0x7fb656731700 (LWP 148759)):
+#0  0x00007fb6601129a3 in select () from /usr/lib64/libc.so.6
+#1  0x00007fb6659ef133 in qt_safe_select(int, fd_set*, fd_set*, fd_set*, timeval const*) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#2  0x00007fb6659f1ffc in QEventDispatcherUNIXPrivate::doSelect(QFlags<QEventLoop::ProcessEventsFlag>, timeval*) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#3  0x00007fb6659f2b22 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#4  0x00007fb6659c7e2f in QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#5  0x00007fb6659c80c8 in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#6  0x00007fb6658e9e33 in QThread::exec() () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#7  0x00007fb6659ade3f in QInotifyFileSystemWatcherEngine::run() () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#8  0x00007fb6658ec661 in QThreadPrivate::start(void*) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#9  0x000000000bbc77df in sdp_wrap_start_routine ()
+#10 0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#11 0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 23 (Thread 0x7fb655f30700 (LWP 148760)):
+#0  0x00007fb6601129a3 in select () from /usr/lib64/libc.so.6
+#1  0x00007fb6659ef133 in qt_safe_select(int, fd_set*, fd_set*, fd_set*, timeval const*) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#2  0x00007fb6659f1ffc in QEventDispatcherUNIXPrivate::doSelect(QFlags<QEventLoop::ProcessEventsFlag>, timeval*) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#3  0x00007fb6659f2b22 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#4  0x00007fb6659c7e2f in QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#5  0x00007fb6659c80c8 in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#6  0x00007fb6658e9e33 in QThread::exec() () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#7  0x00007fb6659ade3f in QInotifyFileSystemWatcherEngine::run() () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#8  0x00007fb6658ec661 in QThreadPrivate::start(void*) () from /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#9  0x000000000bbc77df in sdp_wrap_start_routine ()
+#10 0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#11 0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 22 (Thread 0x7fb65031b700 (LWP 122722)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 21 (Thread 0x7fb65091c700 (LWP 122723)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 20 (Thread 0x7fb650f1d700 (LWP 122724)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 19 (Thread 0x7fb65151e700 (LWP 122725)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 18 (Thread 0x7fb651b1f700 (LWP 122726)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 17 (Thread 0x7fb652120700 (LWP 122727)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 16 (Thread 0x7fb65572b700 (LWP 122728)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 15 (Thread 0x7fb65512a700 (LWP 122729)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 14 (Thread 0x7fb654b29700 (LWP 122730)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 13 (Thread 0x7fb654528700 (LWP 122731)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 12 (Thread 0x7fb653f27700 (LWP 122732)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 11 (Thread 0x7fb653926700 (LWP 122733)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 10 (Thread 0x7fb653325700 (LWP 122734)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 9 (Thread 0x7fb652d24700 (LWP 122735)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 8 (Thread 0x7fb652723700 (LWP 122736)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 7 (Thread 0x7fb64d916700 (LWP 122737)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7c3c3f in ffrObject::LoadThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 6 (Thread 0x7fb645b01700 (LWP 122738)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7b44c5 in ffrObject::StartSecondaryThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 5 (Thread 0x7fb645500700 (LWP 122739)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7b44c5 in ffrObject::StartSecondaryThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 4 (Thread 0x7fb644eff700 (LWP 122740)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7b44c5 in ffrObject::StartSecondaryThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 3 (Thread 0x7fb6448fe700 (LWP 122741)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7b44c5 in ffrObject::StartSecondaryThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 2 (Thread 0x7fb6442fd700 (LWP 122742)):
+#0  0x00007fb6671f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib64/libpthread.so.0
+#1  0x000000000b684424 in ffrSynchronizer::CondWait(int) ()
+#2  0x000000000b7b44c5 in ffrObject::StartSecondaryThread(void*) ()
+#3  0x000000000bbc77df in sdp_wrap_start_routine ()
+#4  0x00007fb6671f5ea5 in start_thread () from /usr/lib64/libpthread.so.0
+#5  0x00007fb66011b96d in clone () from /usr/lib64/libc.so.6
+Thread 1 (Thread 0x7fb66932bc80 (LWP 148609)):
+#0  0x00007fb66010c9bd in read () from /usr/lib64/libc.so.6
+#1  0x00007fb660098cc4 in __GI__IO_file_underflow () from /usr/lib64/libc.so.6
+#2  0x00007fb660099e92 in __GI__IO_default_uflow () from /usr/lib64/libc.so.6
+#3  0x00007fb66008cc44 in __GI__IO_getline_info () from /usr/lib64/libc.so.6
+#4  0x00007fb66008ba46 in fgets () from /usr/lib64/libc.so.6
+#5  0x000000000bc9ee22 in _sys_fgets ()
+#6  0x000000000bc2cf58 in sysGetCallStack ()
+#7  0x000000000b6a0a27 in ErrorMessage(ffrErrorSeverity, char*, char*, char*, int) ()
+#8  0x000000000b7b4e92 in ffrRealObject::LoadPrimarySignalArrayByTimeRange(unsigned int, long long*, fsdbXTag&, fsdbXTag&) ()
+#9  0x000000000b7b5c9f in ffrRealObject::ffrLoadSecondaryVarVCOnDemand(ffrVar*, void*&, fsdbXTag*, fsdbXTag*, char, char, char) ()
+#10 0x000000000b5e6f6a in ffrRealObject::ReadOrComputeVCOnDemand(ffrVar*, void*&, fsdbXTag*, fsdbXTag*, char, char, char) ()
+#11 0x000000000b5ad0b2 in ffrVCIterOne::GotoNextVCLODThreadSafe(char) ()
+#12 0x000000000b5ad2a7 in ffrVCIterOne::__GotoNextVCLODThreadSafe(ffrVCIterOne*, char) ()
+#13 0x000000000b5b4595 in ffrVCIterOne::ffrGotoNextVC() ()
+#14 0x000000000b54c5f6 in ffrVCIterOne::_Draw_DetectXAndGlitchOfPixel_Normal(fsdbXTag&, fsdbXTag&, char&, char*, char&, unsigned char*, int*, unsigned char**, fsdbXTag*) ()
+#15 0x000000000b54cf45 in ffrVCIterOne::ffrDraw_Next_BCN(char*, char*, int*, fsdbXTag*, int*, unsigned char**, unsigned char**, fsdbXTag*) ()
+stack too large ... truncated

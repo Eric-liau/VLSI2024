@@ -1,0 +1,35 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-XLMODE
+./INCA_libs/irun.lnx86.15.20.nc
+-RUNMODE
+/home/LiauYiShang/VLSI2024/hw3/P76131084/./sim/top_tb.sv
+-INCDIR
+/home/LiauYiShang/VLSI2024/hw3/P76131084/./src
+-INCDIR
+/home/LiauYiShang/VLSI2024/hw3/P76131084/./src/AXI
+-INCDIR
+/home/LiauYiShang/VLSI2024/hw3/P76131084/./include
+-INCDIR
+/home/LiauYiShang/VLSI2024/hw3/P76131084/./sim
+-DEFINE
+prog0
+-DEFINE
+FSDB_ALL
+-DEFINE
+CYCLE=5.0
+-DEFINE
+CYCLE2=50.0
+-DEFINE
+MAX=30000000
+-CDSLIB
+./INCA_libs/irun.lnx86.15.20.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx86.15.20.nc/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./INCA_libs/irun.lnx86.15.20.nc/xllibs
+-ALLOWUNBOUND
