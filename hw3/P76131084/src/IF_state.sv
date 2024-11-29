@@ -16,6 +16,7 @@ module IF_state (
     input DM_stall,
     input load_stall,
     input interrupt_stall,
+    input reboot,
 
     output logic isinstruct_IF
 );
@@ -30,11 +31,11 @@ logic instret_minus;
 
 
 assign stall = load_stall | DM_stall | interrupt_stall;
-assign CEB = PCsrc | stall | rst ? 1'b1 : 1'b0;
+assign CEB = PCsrc | stall | rst | reboot ? 1'b1 : 1'b0;
 
 
 assign pc_4 = /*PCsrc_reg ? pc_out : */pc_out + 32'd4;
-assign pc_in = PCsrc ? pc_branch : pc_4;
+assign pc_in = reboot ? 32'b0 : PCsrc ? pc_branch : pc_4;
 assign pc_out_IF = pc_out;
 //assign IM_OE = PCsrc ? 1'b0 : 1'b1;
 
@@ -60,7 +61,15 @@ always_ff@(posedge clk, posedge rst) begin
         isinstruct_IF <= 1'b0;
     end
     else begin
-        if(PCsrc) begin
+        if(reboot) begin
+            pc_4_IF <= 32'b0;
+            //IM_OE <= 1'b0;
+            instr_out <= 32'b0;
+            PCsrc_reg <= 1'b0;
+            instret_minus <= 1'b0;
+            isinstruct_IF <= 1'b0;
+        end
+        else if(PCsrc) begin
             pc_4_IF <= 32'b0;
             //IM_OE <= 1'b0;
             instr_out <= 32'b0;

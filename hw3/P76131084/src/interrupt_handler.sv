@@ -3,9 +3,13 @@ module interrupt_handler(
     input rst,
 
     input isWFI,
+    input WTO_interrupt,
     input DMA_interrupt,
-    output logic interrupt_stall
+    output logic interrupt_stall,
+    output logic reboot
 );
+
+assign reboot = WTO_interrupt;
 
 always_ff@(posedge clk, posedge rst) begin
     if(rst) begin

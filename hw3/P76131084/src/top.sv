@@ -5,6 +5,7 @@
 `include "ROM_wrapper.sv"
 `include "DRAM_wrapper.sv"
 `include "DMA_wrapper.sv"
+`include "WDT_wrapper.sv"
 
 module top(
 	input clk,
@@ -26,7 +27,7 @@ module top(
 	output logic [10:0] DRAM_A,
 	output logic [31:0] DRAM_D
 );
-	logic DMA_interrupt;
+	logic DMA_interrupt, WTO_interrupt;
 	//////////////// M0 ////////////////
 	logic [`AXI_ID_BITS-1:0] 	ARID_M0;
 	logic [`AXI_ADDR_BITS-1:0] 	ARADDR_M0;
@@ -323,6 +324,36 @@ module top(
 	logic 						RVALID_S5;
 	logic 						RREADY_S5;
 
+	WDT_wrapper WDT_wrapper(
+		.clk			(clk				),
+		.rst			(rst				),
+		.clk2			(clk2				),
+		.rst2			(rst2				),
+
+		.WTO			(WTO_interrupt		),
+		//WRITE ADDRESS0
+		.AWID			(AWID_S4			),
+		.AWADDR			(AWADDR_S4			),
+		.AWLEN			(AWLEN_S4			),
+		.AWSIZE			(AWSIZE_S4			),
+		.AWBURST		(AWBURST_S4			),
+		.AWVALID		(AWVALID_S4			),
+		.AWREADY		(AWREADY_S4			),
+
+		//WRITE DATA0
+		.WDATA			(WDATA_S4			),
+		.WSTRB			(WSTRB_S4			),
+		.WLAST			(WLAST_S4			),
+		.WVALID			(WVALID_S4			),
+		.WREADY			(WREADY_S4			),
+
+		//WRITE RESPONSE0
+		.BID			(BID_S4				),
+		.BRESP			(BRESP_S4			),
+		.BVALID			(BVALID_S4			),
+		.BREADY			(BREADY_S4			)
+	);
+
 	DMA_wrapper DMA_wrapper(
 		.clk			(clk				),
 		.rst			(rst				),
@@ -481,6 +512,7 @@ module top(
 		.clk			(clk				),
 		.rst			(rst				),
 		.DMA_interrupt	(DMA_interrupt		),
+		.WTO_interrupt	(WTO_interrupt		),
 
 		.AWID_M1		(AWID_M1			),
 		.AWADDR_M1		(AWADDR_M1			),

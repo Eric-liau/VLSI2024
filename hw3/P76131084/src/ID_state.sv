@@ -16,7 +16,9 @@ module ID_state (
     input ID_isfloat_rd,
 
     //stall
+    input DM_stall,
     input interrupt_stall,
+    input reboot,
     output isStall,
 
     output reg [31:0] pc_out,
@@ -45,7 +47,7 @@ module ID_state (
     output reg isfloat_rs2,
     input flush,
     input isfloat_rd_WB,
-    input DM_stall,
+    
     output logic isMemWrite_ID,
     //CSR
     output logic isCSR_ID,
@@ -212,7 +214,7 @@ always_ff@(posedge clk, posedge rst) begin
         isMRET_ID <= 1'b0;
     end
     else begin
-        if(flush | stall) begin
+        if(flush | stall | reboot) begin
             pc_out <= 32'b0;
             rs1_data_ID <= 32'b0;
             rs2_data_ID <= 32'b0;

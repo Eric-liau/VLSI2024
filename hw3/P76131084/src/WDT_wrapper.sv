@@ -1,4 +1,5 @@
 `include "../include/AXI_define.svh"
+`include "WDT.sv"
 module WDT_wrapper(
     input clk,
     input rst,
@@ -27,24 +28,24 @@ module WDT_wrapper(
 	output logic [`AXI_IDS_BITS-1:0] BID,
 	output logic [1:0] BRESP,
 	output logic BVALID,
-	input BREADY,
+	input BREADY
 
-    //READ ADDRESS0
-	input [`AXI_IDS_BITS-1:0] ARID,
-	input [`AXI_ADDR_BITS-1:0] ARADDR,
-	input [`AXI_LEN_BITS-1:0] ARLEN,
-	input [`AXI_SIZE_BITS-1:0] ARSIZE,
-	input [1:0] ARBURST,
-	input ARVALID,
-	output logic ARREADY,
-	
-	//READ DATA0
-	output logic [`AXI_IDS_BITS-1:0] RID,
-	output logic [`AXI_DATA_BITS-1:0] RDATA,
-	output logic [1:0] RRESP,
-	output logic RLAST,
-	output logic RVALID,
-	input RREADY
+    ////READ ADDRESS0
+	//input [`AXI_IDS_BITS-1:0] ARID,
+	//input [`AXI_ADDR_BITS-1:0] ARADDR,
+	//input [`AXI_LEN_BITS-1:0] ARLEN,
+	//input [`AXI_SIZE_BITS-1:0] ARSIZE,
+	//input [1:0] ARBURST,
+	//input ARVALID,
+	//output logic ARREADY,
+	//
+	////READ DATA0
+	//output logic [`AXI_IDS_BITS-1:0] RID,
+	//output logic [`AXI_DATA_BITS-1:0] RDATA,
+	//output logic [1:0] RRESP,
+	//output logic RLAST,
+	//output logic RVALID,
+	//input RREADY
 );
 
 localparam [1:0]    IDLE = 2'b00,   
@@ -55,9 +56,11 @@ localparam [1:0]    IDLE = 2'b00,
 logic [1:0] state, nextstate;
 logic WDEN, WDLIVE, isCNTRST;
 logic [31:0] WTOCNT, ADDR;
+logic [`AXI_IDS_BITS-1:0] AWID_reg;
 
+assign BID = AWID_reg;
 
-WDT WFT(
+WDT WDT(
 	.clk(clk),
     .rst(rst),
     .clk2(clk2),
@@ -70,24 +73,47 @@ WDT WFT(
 );
 
 always_comb begin
-	AWREADY = 1'b0;
-	WREADY = 1'b0;
-	BVALID = 1'b0;
-    case(state)
-        IDLE : begin
-            nextstate = AWVALID_S & AWREADY ? WRITE : IDLE;
-            AWREADY = AWVALID ? 1'b1 : 1'b0;
-        end
-        WRITE : begin
-            nextstate = WVALID & WREADY & WLAST ? RESPONSE : WRITE;
-            WREADY = WVALID ? 1'b1 : 1'b0;
-        end
-        RESPONSE : begin
-            nextstate = BVALID & BREADY ? IDLE : RESPONSE;
-            BVALID = 1'b1;
-        end
+	case(state)
+        IDLE : nextstate = AWVALID & AWREADY ? WRITE : IDLE;
+        WRITE : nextstate = WVALID & WREADY & WLAST ? RESPONSE : WRITE;
+        RESPONSE : nextstate = BVALID & BREADY ? IDLE : RESPONSE;
         default : nextstate = IDLE;
     endcase
+
+end
+
+always_comb begin
+    case(state)
+        IDLE : begin
+            AWREADY = AWVALID ? 1'b1 : 1'b0;
+			WREADY = 1'b0;
+			BVALID = 1'b0;
+        end
+        WRITE : begin
+            AWREADY = 1'b0;
+			WREADY = WVALID ? 1'b1 : 1'b0;
+			BVALID = 1'b0;
+        end
+        RESPONSE : begin
+            AWREADY = 1'b0;
+			WREADY = 1'b0;
+			BVALID = 1'b1;
+        end
+        default : begin
+			AWREADY = 1'b0;
+			WREADY = 1'b0;
+			BVALID = 1'b0;
+		end
+    endcase
+end
+
+always_ff@(posedge clk, posedge rst) begin
+    if(rst) begin
+        AWID_reg <= `AXI_IDS_BITS'b0;
+    end
+    else begin
+        AWID_reg <= AWVALID ? AWID : AWID_reg;
+    end
 end
 
 always_ff@(posedge clk, posedge rst) begin

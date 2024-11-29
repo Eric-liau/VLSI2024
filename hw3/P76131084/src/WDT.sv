@@ -49,7 +49,7 @@ always_ff@(posedge clk2, posedge rst2) begin
         CNT <= 32'b0;
     end
     else begin
-        CNT <= isCNTRST_b ? 32'b0 : WDEN_b2 ? CNT + 32'b1 : CNT;
+        CNT <= isCNTRST_b | (CNT > WTOCNT) ? 32'b0 : WDEN_b2 ? CNT + 32'b1 : CNT;
     end
 end
 
@@ -60,7 +60,7 @@ always_ff@(posedge clk2, posedge rst2) begin
     end
     else begin
         isCNTRST_b <= WDLIVE_b2 | WTO_b ? 1'b1 : 1'b0;
-        WTO_b <= CNT >= WTOCNT ? 1'b1 : 1'b0;
+        WTO_b <= CNT >= WTOCNT & WDEN_b2 ? 1'b1 : 1'b0;
     end
 
 end

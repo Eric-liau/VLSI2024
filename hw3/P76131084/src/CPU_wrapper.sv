@@ -6,6 +6,7 @@ module CPU_wrapper(
     input clk,
     input rst,
 	input DMA_interrupt,
+	input WTO_interrupt,
 
     //READ ADDRESS0
     output logic [`AXI_ID_BITS-1:0] ARID_M0,
@@ -89,7 +90,8 @@ CPU cpu(
 	.DM_CEB(DM_CEB),
 	.IM_stall(IM_stall),
 	.DM_stall(DM_stall),
-	.DMA_interrupt(DMA_interrupt)
+	.DMA_interrupt(DMA_interrupt),
+	.WTO_interrupt(WTO_interrupt)
 );
 
 master master0(

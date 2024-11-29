@@ -18,7 +18,8 @@ module CPU(
     output DM_CEB,
     input IM_stall,
     input DM_stall,
-    input DMA_interrupt
+    input DMA_interrupt,
+    input WTO_interrupt
 );
 
 wire [31:0] IF_pc_4, ID_pc_4, ID_rs1_data, ID_rs2_data, ID_imm, EXE_rs2_data, EXE_ADDER_result, EXE_result, MEM_result, /*MEM_store_data, */writebackdata, EXE_pc_4, MEM_pc_4, WB_pc_4, MEM_load_data, IF_instr;
@@ -35,7 +36,7 @@ logic ID_isCSR, EXE_isCSR, MEM_isCSR;
 logic ID_isMRET, EXE_isMRET, MEM_isMRET;
 logic [3:0] ID_csr, EXE_csr, MEM_csr;
 logic IF_isinstruct, ID_isinstruct, EXE_isinstruct, MEM_isinstruct;
-logic isWFI, interrupt_stall;
+logic isWFI, interrupt_stall, reboot;
 
 assign MemRead = EXE_MemRead;
 assign MemWrite = EXE_MemWrite;
@@ -47,8 +48,10 @@ interrupt_handler interrupt_handler(
     .rst(rst),
 
     .isWFI(isWFI),
+    .WTO_interrupt(WTO_interrupt),
     .DMA_interrupt(DMA_interrupt),
-    .interrupt_stall(interrupt_stall)
+    .interrupt_stall(interrupt_stall),
+    .reboot(reboot)
 );
 
 IF_state IF_state(
@@ -67,6 +70,7 @@ IF_state IF_state(
     .DM_stall(DM_stall),
     .load_stall(stall),
     .interrupt_stall(interrupt_stall),
+    .reboot(reboot),
     .isinstruct_IF(IF_isinstruct)
 );
 
@@ -113,6 +117,7 @@ ID_state ID_state(
     //stall
     .isStall(stall),
     .DM_stall(DM_stall),
+    .reboot(reboot),
     .interrupt_stall(interrupt_stall),
 
     .isMemWrite_ID(ID_isMemWrite),
