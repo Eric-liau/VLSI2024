@@ -90,6 +90,12 @@
 /home/LiauYiShang/VLSI2024/hw3/P76131084/src/DMA.sv
 ./../include/AXI_define.svh
 /home/LiauYiShang/VLSI2024/hw3/P76131084/include/AXI_define.svh
+/home/LiauYiShang/VLSI2024/hw3/P76131084/./src/WDT_wrapper.sv
+/home/LiauYiShang/VLSI2024/hw3/P76131084/src/WDT_wrapper.sv
+./../include/AXI_define.svh
+/home/LiauYiShang/VLSI2024/hw3/P76131084/include/AXI_define.svh
+/home/LiauYiShang/VLSI2024/hw3/P76131084/./src/WDT.sv
+/home/LiauYiShang/VLSI2024/hw3/P76131084/src/WDT.sv
 /home/LiauYiShang/VLSI2024/hw3/P76131084/./sim//SRAM/TS1N16ADFPCLLLVTA512X45M4SWSHOD.sv
 /home/LiauYiShang/VLSI2024/hw3/P76131084/sim/SRAM/TS1N16ADFPCLLLVTA512X45M4SWSHOD.sv
 /home/LiauYiShang/VLSI2024/hw3/P76131084/./sim/ROM/ROM.v

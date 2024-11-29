@@ -76,13 +76,16 @@ rtl1: | $(bld_dir)
 	fi; \
 	make -C $(sim_dir)/prog1/; \
 	cd $(bld_dir); \
-	vcs -R -sverilog $(root_dir)/$(sim_dir)/top_tb.sv -debug_access+all -full64 -debug_region +cell +memcbk \
+	irun $(root_dir)/$(sim_dir)/top_tb.sv \
 	+incdir+$(root_dir)/$(src_dir)+$(root_dir)/$(src_dir)/AXI+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
     +define+prog1$(FSDB_DEF) \
 	+define+CYCLE=$(CYCLE) \
 	+define+CYCLE2=$(CYCLE2) \
 	+define+MAX=$(MAX) \
+	+access+r \
+	+nc64bit \
 	+prog_path=$(root_dir)/$(sim_dir)/prog1 \
+	+rdcycle=1 \
 	+notimingcheck
 
 rtl2: | $(bld_dir)
@@ -92,13 +95,16 @@ rtl2: | $(bld_dir)
 	fi; \
 	make -C $(sim_dir)/prog2/; \
 	cd $(bld_dir); \
-	vcs -R -sverilog $(root_dir)/$(sim_dir)/top_tb.sv -debug_access+all -full64 -debug_region +cell +memcbk  \
+	irun $(root_dir)/$(sim_dir)/top_tb.sv \
 	+incdir+$(root_dir)/$(src_dir)+$(root_dir)/$(src_dir)/AXI+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
 	+define+prog2$(FSDB_DEF) \
 	+define+CYCLE=$(CYCLE) \
 	+define+CYCLE2=$(CYCLE2) \
 	+define+MAX=$(MAX) \
+	+access+r \
+	+nc64bit \
 	+prog_path=$(root_dir)/$(sim_dir)/prog2 \
+	+rdcycle=1 \
 	+notimingcheck
 	
 rtl3: | $(bld_dir)
@@ -108,7 +114,7 @@ rtl3: | $(bld_dir)
 	fi; \
 	make -C $(sim_dir)/prog3/; \
 	cd $(bld_dir); \
-	irun $(root_dir)/$(sim_dir)/top_tb.sv \
+	irun $(root_dir)/$(sim_dir)/top_tb_WDT.sv \
 	+incdir+$(root_dir)/$(src_dir)+$(root_dir)/$(src_dir)/AXI+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
 	+define+prog3$(FSDB_DEF) \
 	+define+CYCLE=$(CYCLE) \
@@ -127,12 +133,12 @@ rtl4: | $(bld_dir)
 	fi; \
 	make -C $(sim_dir)/prog4/; \
 	cd $(bld_dir); \
-	irun $(root_dir)/$(sim_dir)/top_tb.sv \
+	irun $(root_dir)/$(sim_dir)/top_tb_WDT.sv \
 	+incdir+$(root_dir)/$(src_dir)+$(root_dir)/$(src_dir)/AXI+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
 	+define+prog4$(FSDB_DEF) \
 	+define+CYCLE=$(CYCLE) \
 	+define+CYCLE2=$(CYCLE2) \
-	+define+$(MAX) \
+	+define+MAX=$(MAX) \
 	+access+r \
 	+nc64bit \
 	+prog_path=$(root_dir)/$(sim_dir)/prog4 \

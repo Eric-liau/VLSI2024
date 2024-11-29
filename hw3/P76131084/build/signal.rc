@@ -16,16 +16,16 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 301279656.999083 301585974.778900
-cursor 301367500.000000
+zoom 3205388137.985672 3205694455.765487
+cursor 261777500.000000
 marker 0.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
-top 39
+top 128
 ; marker line index
-markerPos 69
+markerPos 325
 
 ; event list
 ; addEvent event_name event_expression
@@ -55,7 +55,8 @@ addSignal -h 15 -holdScope rst
 addSignal -h 15 -holdScope stall
 addSignal -h 15 -holdScope IM_stall
 addSignal -h 15 -holdScope DM_stall
-addSubGroup "ID"
+addSignal -h 15 -holdScope reboot
+addSubGroup "ID" -e FALSE
 addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/ID_state/instr[31:0]
 addSignal -h 15 -holdScope pc_in[31:0]
 addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/ID_state/register/val1[31:0]
@@ -99,7 +100,7 @@ addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[2][31:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[1][31:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope reg_file[0][31:0]
 endSubGroup "ID"
-addGroup "CSR_reg"
+addGroup "CSR_reg" -e FALSE
 addSignal -expanded -h 15 -UNSIGNED -HEX /top_tb/TOP/CPU_wrapper/cpu/ID_state/register/CSR_reg[8:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope CSR_reg[8][31:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope CSR_reg[7][31:0]
@@ -110,14 +111,17 @@ addSignal -h 15 -UNSIGNED -HEX -holdScope CSR_reg[3][31:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope CSR_reg[2][31:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope CSR_reg[1][31:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope CSR_reg[0][31:0]
-addGroup "EXE"
+addGroup "interrupt_handler"
+addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/interrupt_handler/WTO_interrupt
+addSignal -h 15 -holdScope reboot
+addGroup "EXE" -e FALSE
 addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/EXE_state/pc_in[31:0]
 addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/EXE_state/ALU/ALUctl[4:0]
 addSignal -h 15 -holdScope data1[31:0]
 addSignal -h 15 -holdScope data2[31:0]
 addSignal -h 15 /top_tb/TOP/CPU_wrapper/cpu/EXE_state/rs2_data[31:0]
 addSignal -h 15 -holdScope reg2_data[31:0]
-addGroup "CPU_wrapper"
+addGroup "CPU_wrapper" -e FALSE
 addSignal -h 15 /top_tb/TOP/CPU_wrapper/Memadr[31:0]
 addSignal -h 15 -holdScope store_data[31:0]
 addGroup "master0" -e FALSE
@@ -186,7 +190,7 @@ addSignal -h 15 -holdScope ADDR_M1[31:0]
 addSignal -h 15 -holdScope ADDR_M2[31:0]
 addSignal -h 15 -holdScope busy
 addSignal -h 15 -holdScope VALID_S2
-addGroup "Write_response" -e FALSE
+addGroup "Write_response"
 addSignal -h 15 /top_tb/TOP/AXI/Write_Response/slave[2:0]
 addSignal -h 15 -holdScope state[2:0]
 addSignal -h 15 -UNSIGNED -BIN -holdScope BID_S5[7:0]
@@ -195,8 +199,9 @@ addSignal -h 15 -holdScope BVALID_M1
 addSignal -h 15 -holdScope BREADY_S5
 addSignal -h 15 -holdScope BVALID_S5
 addSignal -h 15 -holdScope BID_M1[3:0]
-addSignal -h 15 -holdScope BREADY_S2
-addSignal -h 15 -holdScope BVALID_S2
+addSignal -h 15 -holdScope BREADY_S4
+addSignal -h 15 -holdScope BVALID_S4
+addSignal -h 15 -holdScope BID_S4[7:0]
 addGroup "WD" -e FALSE
 addSignal -h 15 /top_tb/TOP/AXI/DW/WVALID_M1
 addSignal -h 15 -holdScope WVALID_M2
@@ -246,6 +251,8 @@ addSignal -h 15 -holdScope clk
 addGroup "DM" -e FALSE
 addSignal -h 15 /top_tb/TOP/DM1/ARREADY
 addSignal -h 15 -holdScope ARVALID
+addSignal -h 15 -holdScope DO[31:0]
+addSignal -h 15 -holdScope ARADDR[31:0]
 addSignal -h 15 -holdScope AWREADY
 addSignal -h 15 -holdScope AWVALID
 addSignal -h 15 -holdScope RVALID
@@ -351,7 +358,30 @@ addSignal -h 15 -holdScope BVALID
 addSignal -h 15 -holdScope RDATA[31:0]
 addSignal -h 15 -holdScope WDATA[31:0]
 addSignal -h 15 -holdScope data[31:0]
-addGroup "G18"
+addGroup "WDT_wrapper"
+addSignal -h 15 /top_tb/TOP/WDT_wrapper/AWADDR[31:0]
+addSignal -h 15 -holdScope AWREADY
+addSignal -h 15 -holdScope AWVALID
+addSignal -h 15 -holdScope WREADY
+addSignal -h 15 -holdScope WVALID
+addSignal -h 15 -holdScope BREADY
+addSignal -h 15 -holdScope BVALID
+addSignal -h 15 -holdScope WDATA[31:0]
+addSignal -h 15 -holdScope state[1:0]
+addSignal -h 15 -holdScope nextstate[1:0]
+addSignal -h 15 -holdScope clk
+addSignal -h 15 -holdScope rst
+addSignal -h 15 -holdScope ADDR[31:0]
+addSignal -h 15 -holdScope AWID[7:0]
+addSignal -h 15 -holdScope AWID_reg[7:0]
+addGroup "WDT"
+addSignal -h 15 /top_tb/TOP/WDT_wrapper/WDT/CNT[31:0]
+addSignal -h 15 -holdScope WDEN_b2
+addSignal -h 15 -holdScope WTOCNT[31:0]
+addSignal -h 15 -holdScope WTO_b
+addSignal -h 15 -holdScope clk2
+addSignal -h 15 -holdScope rst2
+addGroup "G21"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm
@@ -377,6 +407,8 @@ getSignalForm close
 "/top_tb/TOP/CPU_wrapper/cpu/EXE_state/ALU"
 "/top_tb/TOP/CPU_wrapper/cpu/ID_state"
 "/top_tb/TOP/CPU_wrapper/cpu/ID_state/register"
+"/top_tb/TOP/CPU_wrapper/cpu/IF_state"
+"/top_tb/TOP/CPU_wrapper/cpu/interrupt_handler"
 "/top_tb/TOP/CPU_wrapper/master1"
 "/top_tb/TOP/DM1"
 "/top_tb/TOP/DM1/i_SRAM"
@@ -385,8 +417,9 @@ getSignalForm close
 "/top_tb/TOP/DRAM_wrapper"
 "/top_tb/TOP/IM1"
 "/top_tb/TOP/ROM_wrapper"
+"/top_tb/TOP/WDT_wrapper"
+"/top_tb/TOP/WDT_wrapper/WDT"
 "/top_tb/i_DRAM"
-"/top_tb/i_ROM"
 
 SCOPE_LIST_BEGIN
 "/top_tb"
@@ -420,6 +453,9 @@ SCOPE_LIST_BEGIN
 "/top_tb/TOP/DM1/i_SRAM"
 "/top_tb/TOP/CPU_wrapper/cpu/ID_state/immGenerator"
 "/top_tb/TOP/CPU_wrapper/cpu/EXE_state/ALU"
+"/top_tb/TOP/CPU_wrapper/cpu/interrupt_handler"
+"/top_tb/TOP/WDT_wrapper/WDT"
+"/top_tb/TOP/WDT_wrapper"
 SCOPE_LIST_END
 
 GETSIGNALFORM_SCOPE_HIERARCHY_END

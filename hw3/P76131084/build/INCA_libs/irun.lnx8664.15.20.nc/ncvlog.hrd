@@ -11,7 +11,7 @@
 -INCDIR
 /home/LiauYiShang/VLSI2024/hw3/P76131084/./sim
 -DEFINE
-prog0
+prog4
 -DEFINE
 CYCLE=5.0
 -DEFINE

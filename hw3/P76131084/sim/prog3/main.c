@@ -55,6 +55,8 @@ int main(void) {
   WDT_addr[0xc0] = 10000; // tonet
   WDT_addr[0x40] = 1; // WDT_en
   
+  int a = 1;
+  int b = 2;
   int c = 0;
   
 	  for(int i = 0; i < 100; i++){

@@ -5,7 +5,7 @@
 -XLMODE
 ./INCA_libs/irun.lnx8664.15.20.nc
 -RUNMODE
-/home/LiauYiShang/VLSI2024/hw3/P76131084/./sim/top_tb.sv
+/home/LiauYiShang/VLSI2024/hw3/P76131084/./sim/top_tb_WDT.sv
 -INCDIR
 /home/LiauYiShang/VLSI2024/hw3/P76131084/./src
 -INCDIR
@@ -15,7 +15,7 @@
 -INCDIR
 /home/LiauYiShang/VLSI2024/hw3/P76131084/./sim
 -DEFINE
-prog0
+prog4
 -DEFINE
 CYCLE=5.0
 -DEFINE
