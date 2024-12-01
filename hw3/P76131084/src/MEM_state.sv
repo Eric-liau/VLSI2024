@@ -44,16 +44,26 @@ module MEM_state(
 
 assign PCsrc = isSet_EXE & Branch_EXE;
 assign CEB = (isMemWrite | MemRead_EXE) ? 1'b0 : 1'b1;
+logic [31:0] memdata2;
 
 reg [31:0] memdata;
+always_comb begin
+    case(result_EXE[1:0])
+        2'b11:memdata2 = {memdata_in[23:0], memdata_in[31:24]};
+        2'b10:memdata2 = {memdata_in[15:0], memdata_in[31:16]};
+        2'b01:memdata2 = {memdata_in[7:0], memdata_in[31:8]};
+        default:memdata2 = memdata_in;
+    endcase
+end
 
 always_comb begin
+
     case(funct3_EXE)
-        3'b000:memdata = {{24{memdata_in[31]}}, memdata_in[31:24]};//LB
-        3'b001:memdata = {{16{memdata_in[31]}}, memdata_in[31:16]};//LH
-        3'b101:memdata = {16'b0, memdata_in[31:16]};//LHU
-        3'b100:memdata = {24'b0, memdata_in[31:24]};//LBU
-        default:memdata = memdata_in;
+        3'b000:memdata = {{24{memdata2[7]}}, memdata2[7:0]};//LB
+        3'b001:memdata = {{16{memdata2[15]}}, memdata2[15:0]};//LH
+        3'b101:memdata = {16'b0, memdata2[15:0]};//LHU
+        3'b100:memdata = {24'b0, memdata2[7:0]};//LBU
+        default:memdata = memdata2;
     endcase
 end
 
