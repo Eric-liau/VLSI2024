@@ -64,9 +64,9 @@ module DRAM_wrapper (
 
     always_ff @( posedge clk, posedge rst ) begin
         if(rst)
-            c_state = idle;
+            c_state <= idle;
         else
-            c_state = n_state;
+            c_state <= n_state;
     end 
 
     always_ff @( posedge clk, posedge rst ) begin
