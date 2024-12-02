@@ -44,12 +44,16 @@ int main(void) {
     for(int i=0; i<54; i++)
         (&_test_start)[i]=(&_binary_image_bmp_start)[i];
 
-    for(int i=54;i<_binary_image_bmp_size;i=i+3){
+    for(int i=54;i<&_binary_image_bmp_size;i=i+3){
         int result=0;
-        int b=(&_test_start)[i];
-        int g=(&_test_start)[i+1];
-        int r=(&_test_start)[i+2];
-        result = b*0.11 + g*0.59 + r*0.3;
+        int b=(&_binary_image_bmp_start)[i];
+        int g=(&_binary_image_bmp_start)[i+1];
+        int r=(&_binary_image_bmp_start)[i+2];
+
+        int b1 = b*11;
+        int g1 = g*59;
+        int r1 = r*30;
+        result = (b1 + g1 + r1) / 100;
 
         (&_test_start)[i] = result;
         (&_test_start)[i+1] = result;
