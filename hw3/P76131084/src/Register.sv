@@ -106,8 +106,6 @@ always_ff@(posedge clk, posedge rst) begin
         if(isinstruct)
             {CSR_reg[instreth], CSR_reg[instret]} <= {CSR_reg[instreth], CSR_reg[instret]} + 64'b1;
 
-        if(isCSR_WB & (rd != 5'b0)) 
-            reg_file[rd] <= CSR_reg[csr_WB];
         if(isCSR_WB) begin
             case(csr_WB)
                 mstatus : begin
@@ -142,7 +140,9 @@ always_ff@(posedge clk) begin
     if(WBctl & (rd != 5'b0) & ~isfloat_rd) 
         reg_file[rd] <= val3;
     else if(WBctl & isfloat_rd)
-        reg_file_float[rd] <= val3;    
+        reg_file_float[rd] <= val3;
+    else if(isCSR_WB & (rd != 5'b0)) 
+        reg_file[rd] <= CSR_reg[csr_WB];    
 end
 
 
