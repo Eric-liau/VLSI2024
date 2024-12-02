@@ -58,7 +58,9 @@ module DRAM_wrapper (
 				r_data = 3'd2,
             	w_data = 3'd3,
                 w_resp = 3'd4,
-                prec = 3'd5;
+                prec = 3'd5,
+                overflow_prec = 3'd6,
+                overflow_act = 3'd7;
 
     always_ff @( posedge clk, posedge rst ) begin
         if(rst)
@@ -81,7 +83,13 @@ module DRAM_wrapper (
                 delay_counter <= delay_counter + 3'd1;
             else if((c_state == r_data || c_state == w_data) && delay_counter == 3'd5)
                 delay_counter <= 3'd0;
-            else if(c_state == r_data || c_state == w_data)
+            else if(c_state == r_data || c_state == w_data) begin
+                if(n_state == overflow_prec)
+                    delay_counter <= 3'd0;
+                else 
+                    delay_counter <= delay_counter + 3'd1;
+            end
+            else if(c_state == overflow_act || c_state == overflow_prec)
                 delay_counter <= delay_counter + 3'd1;
         end
     end
@@ -99,18 +107,21 @@ module DRAM_wrapper (
 
     always_ff @( posedge clk, posedge rst ) begin
         if(rst)
-            len_counter <= 2'd0;
+            len_counter <= 4'd0;
         else begin
             if(c_state == r_data)begin
                 if(RVALID & RREADY) begin
                     if(len_counter == reg_len)
-                        len_counter <= 2'b0;
+                        len_counter <= 4'b0;
                     else
-                        len_counter <= len_counter + 2'd1;
+                        len_counter <= len_counter + 4'd1;
                 end
             end
+            else if(c_state == overflow_act || c_state == overflow_prec) begin
+                len_counter <= len_counter;
+            end
             else
-                len_counter <= 2'd0;
+                len_counter <= 4'd0;
         end
     end
 
@@ -121,10 +132,12 @@ module DRAM_wrapper (
             AWVALID_reg <= 1'b0;
         end
         else begin
-            if(c_state == idle) begin
-                ARVALID_reg <= ARVALID;
-                AWVALID_reg <= AWVALID;
-            end
+            //if(c_state == idle) begin
+            //    ARVALID_reg <= ARVALID;
+            //    AWVALID_reg <= AWVALID;
+            //end
+            ARVALID_reg <= ARREADY ? ARVALID : ARVALID_reg;
+            AWVALID_reg <= AWREADY ? AWVALID : AWVALID_reg;
         end
     end
     logic RVALID_reg;
@@ -159,7 +172,10 @@ module DRAM_wrapper (
                     n_state = act;
             end
             r_data:begin//
-                if(RLAST & RREADY)
+                if(A_now[11:2] == 10'h3ff && ~RLAST && DRAM_valid) begin
+                    n_state = overflow_prec;
+                end
+                else if(RLAST & RREADY)
                     n_state = prec;
                 else
                     n_state = r_data;
@@ -181,6 +197,19 @@ module DRAM_wrapper (
                     n_state = idle;
                 else
                     n_state = prec;
+            end
+            overflow_act:begin
+                if(delay_counter == 3'd5)begin
+                    n_state = r_data;
+                end
+                else
+                    n_state = overflow_act;
+            end
+            overflow_prec:begin
+                if(delay_counter == 3'd5)
+                    n_state = overflow_act;
+                else
+                    n_state = overflow_prec;
             end
         endcase
     end
@@ -204,6 +233,8 @@ module DRAM_wrapper (
                     reg_len <= AWLEN;
                 end
             end
+            else if(c_state == overflow_act)
+                A_act <= A_now;
             else if(c_state == r_data) begin
                 if(DRAM_valid/*RVALID & RREADY*/) begin
                     A_now <= A_now + 32'd4;
@@ -308,6 +339,32 @@ module DRAM_wrapper (
                 DRAM_CASn = 1'b1;
                 DRAM_A = A_act[22:12];
                 DRAM_D = WDATA_reg;
+            end
+            overflow_prec: begin
+                ARREADY = 1'b0;
+                RVALID = 1'b0;
+                AWREADY = 1'b0;
+                WREADY = 1'b0;
+                BVALID = 1'b0;
+                DRAM_CSn = 1'b0;
+                DRAM_WEn = (delay_counter == 3'd5)? 4'h0 : 4'hf;
+                DRAM_RASn = (delay_counter == 3'd5)? 1'b0 : 1'b1;
+                DRAM_CASn = 1'b1;
+                DRAM_A = A_act[22:12];
+                DRAM_D = WDATA_reg;
+            end
+            overflow_act: begin
+                ARREADY = 1'b0;
+                RVALID = 1'b0;
+                AWREADY = 1'b0;
+                WREADY = 1'b0;
+                BVALID = 1'b0;
+                DRAM_CSn = 1'b0;
+                DRAM_WEn = 4'hf;
+                DRAM_RASn = (delay_counter == 3'd5)? 1'b0 : 1'b1;
+                DRAM_CASn = 1'b1;
+                DRAM_A = A_now[22:12];
+                DRAM_D = `AXI_DATA_BITS'b0;
             end
         endcase
     end
