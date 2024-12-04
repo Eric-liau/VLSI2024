@@ -59,7 +59,7 @@ module ID_state (
     input isinstruct_IF,
     output logic isinstruct_ID,
     input isinstruct_WB,
-    output logic isWFI, 
+    output logic WFI_interrupt, 
     //debug
     input [31:0] WB_pc_in
     
@@ -158,14 +158,17 @@ immGenerator immGenerator(
 Register register(
     .clk(clk),
     .rst(rst),
+    .pc(pc_in),
     //CSR
     .isCSR(isCSR),
     .isCSR_WB(isCSR_WB),
     .isMRET(isMRET),
     .isMRET_WB(isMRET_WB),
+    .isWFI(isWFI),
     .csr(csr),
     .csr_WB(csr_WB),
     .isinstruct(isinstruct_WB),
+    .WFI_interrupt(WFI_interrupt),
      
     .WBctl(WBctl),
     .isfloat_rs1(float_rs1),

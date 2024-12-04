@@ -864,7 +864,7 @@ module top(
 		.ARSIZE_S3		(ARSIZE_S3			),
 		.ARBURST_S3		(ARBURST_S3			),
 		.ARVALID_S3		(ARVALID_S3			),
-		.ARREADY_S3		(ARREADY_S3			),
+		.ARREADY_S3		(1'b0/*ARREADY_S3*/			),
 
 		.RID_S3			(RID_S3				),
 		.RDATA_S3		(RDATA_S3			),
@@ -899,7 +899,7 @@ module top(
 		.ARSIZE_S4		(ARSIZE_S4			),
 		.ARBURST_S4		(ARBURST_S4			),
 		.ARVALID_S4		(ARVALID_S4			),
-		.ARREADY_S4		(ARREADY_S4			),
+		.ARREADY_S4		(1'b0/*ARREADY_S4*/			),
 
 		.RID_S4			(RID_S4				),
 		.RDATA_S4		(RDATA_S4			),

@@ -96,6 +96,7 @@ module ROM_wrapper (
         if(rst) begin
             A_now <= 14'b0;
             len_counter <= `AXI_LEN_BITS'b0;
+            reg_len <= `AXI_LEN_BITS'b0;
         end
         else if(c_state == idle) begin
             if(ARVALID & ARREADY) begin

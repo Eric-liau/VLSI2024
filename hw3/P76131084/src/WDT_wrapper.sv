@@ -54,9 +54,10 @@ localparam [1:0]    IDLE = 2'b00,
                     RESPONSE = 2'b11;
 
 logic [1:0] state, nextstate;
-logic WDEN, WDLIVE, isCNTRST;
+logic WDEN, WDLIVE, isCNTRST, CNT_enable;
 logic [31:0] WTOCNT, ADDR;
 logic [`AXI_IDS_BITS-1:0] AWID_reg;
+logic WDLIVE_reject, CNT_enable_reject;
 
 assign BID = AWID_reg;
 
@@ -68,7 +69,10 @@ WDT WDT(
     .WDEN(WDEN),
     .WDLIVE(WDLIVE),
     .WTOCNT(WTOCNT),
+	.CNT_enable(CNT_enable),
     .WTO(WTO),
+	.WDLIVE_reject(WDLIVE_reject),
+	.CNT_enable_reject(CNT_enable_reject),
 	.isCNTRST(isCNTRST)
 );
 
@@ -122,12 +126,14 @@ always_ff@(posedge clk, posedge rst) begin
 		WDLIVE <= 1'b0;
 		WTOCNT <= 32'b0;
 		ADDR <= 32'b0;
+		CNT_enable <= 1'b0;
 	end
 	else begin
 		ADDR <= AWVALID & AWVALID ? AWADDR : ADDR;
 		WDEN <= WVALID & WREADY & (ADDR[9:0] == 10'h100) ? WDATA[0] : WDEN;
-		WDLIVE <= WVALID & WREADY & (ADDR[9:0] == 10'h200) ? WDATA[0] : isCNTRST ? 1'b0 : WDLIVE;  
-		WTOCNT <= WVALID & WREADY & (ADDR[9:0] == 10'h300) ? WDATA : WTOCNT; 
+		WDLIVE <= WVALID & WREADY & (ADDR[9:0] == 10'h200) ? WDATA[0] : /*WDLIVE_reject ? WDLIVE : */1'b0;  
+		WTOCNT <= WVALID & WREADY & (ADDR[9:0] == 10'h300) /*& ~CNT_enable*/ ? WDATA : WTOCNT;
+		CNT_enable <= WVALID & WREADY & (ADDR[9:0] == 10'h300) ? 1'b1 : CNT_enable_reject ? CNT_enable : 1'b0;
 	end
 end
 

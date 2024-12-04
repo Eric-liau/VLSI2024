@@ -62,7 +62,7 @@ always_comb begin
             mulres = 64'b0;
         end
         Slt_unsigned : begin
-            result = $unsigned(data1) < $unsigned(data2) ? 32'd1 : 32'd0;
+            result = data1 < data2 ? 32'd1 : 32'd0;
             mulres = 64'b0;
         end
         Xor_a : begin
@@ -99,7 +99,7 @@ always_comb begin
             result = mulres[63:32];
         end
         Mulhu : begin
-            mulres = $unsigned(data1) * $unsigned(data2);
+            mulres = data1 * data2;
             result = mulres[63:32];
         end
         isrs1 : begin
@@ -121,7 +121,7 @@ always_comb begin
         3'b001 : isSet = (data1 != data2) ? 1'b1 : 1'b0;
         3'b100 : isSet = ($signed(data1) < $signed(data2)) ? 1'b1 : 1'b0;
         3'b101 : isSet = ($signed(data1) >= $signed(data2)) ? 1'b1 : 1'b0;
-        3'b110 : isSet = ($unsigned(data1) < $unsigned(data2)) ? 1'b1 : 1'b0;
+        3'b110 : isSet = (data1 < data2) ? 1'b1 : 1'b0;
         3'b111 : isSet = ({1'b0, data1} >= {1'b0, data2}) ? 1'b1 : 1'b0;
         default : isSet = 1'b0;
     endcase

@@ -36,7 +36,7 @@ logic ID_isCSR, EXE_isCSR, MEM_isCSR;
 logic ID_isMRET, EXE_isMRET, MEM_isMRET;
 logic [3:0] ID_csr, EXE_csr, MEM_csr;
 logic IF_isinstruct, ID_isinstruct, EXE_isinstruct, MEM_isinstruct;
-logic isWFI, interrupt_stall, reboot;
+logic WFI_interrupt, interrupt_stall, reboot;
 
 assign MemRead = EXE_MemRead;
 assign MemWrite = EXE_MemWrite;
@@ -47,7 +47,7 @@ interrupt_handler interrupt_handler(
     .clk(clk),
     .rst(rst),
 
-    .isWFI(isWFI),
+    .WFI_interrupt(WFI_interrupt),
     .WTO_interrupt(WTO_interrupt),
     .DMA_interrupt(DMA_interrupt),
     .interrupt_stall(interrupt_stall),
@@ -131,7 +131,7 @@ ID_state ID_state(
     .isinstruct_IF(IF_isinstruct),
     .isinstruct_ID(ID_isinstruct),
     .isinstruct_WB(MEM_isinstruct),
-    .isWFI(isWFI),
+    .WFI_interrupt(WFI_interrupt),
     //debug
     .WB_pc_in(WB_pc_4)
 );

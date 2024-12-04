@@ -4,7 +4,7 @@ module DR(
 	input rst,
 
 	input getaddr_default,
-	input master_signal,
+	//input master_signal,
 	output logic finish_S0,
 	output logic finish_S1,
 	output logic finish_S2,
@@ -66,7 +66,7 @@ module DR(
 	input RVALID_S5,
 	output logic RREADY_S5
 );
-logic waited_Sdefault, error_master, RVALID_default;
+logic waited_Sdefault/*, error_master*/, RVALID_default;
 logic [2:0] state, nextstate, slave;
 logic READY;
 logic success, finish;
@@ -248,14 +248,14 @@ always_comb begin
 				end
 			endcase
 		end
-		3'b111 : begin
+		/*3'b111 : begin
 			if(error_master) begin
 				RRESP_M1 = `AXI_RESP_DECERR;
 			end
 			else begin
 				RRESP_M0 = `AXI_RESP_DECERR;
 			end
-		end
+		end*/
 	endcase
 end
 always_comb begin
@@ -326,14 +326,14 @@ always_ff@(posedge clk, negedge rst) begin
 		state <= idle;
 		waited_Sdefault <= 1'b0;
 		finish <= 1'b0;
-		error_master <= 1'b0;
+		//error_master <= 1'b0;
 	end
 	else begin
 		state <= nextstate;
 		finish <= state == idle & nextstate != idle & success;
 		if(getaddr_default) begin
 			waited_Sdefault <= 1'b1;
-			error_master <= master_signal;
+			//error_master <= master_signal;
 		end
 
 		if(state == default_transfer) 

@@ -250,9 +250,6 @@ always_ff@(posedge clk, posedge rst) begin
             isinstruct_EXE <= 1'b0;
         end
     end
-
-
-
 end
 
 endmodule

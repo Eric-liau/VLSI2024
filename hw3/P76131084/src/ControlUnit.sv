@@ -325,6 +325,7 @@ case(op)
                 end
                 1'b0 : begin
                     isWFI = 1'b1;
+                    isCSR = 1'b0;
                 end
             endcase  
         end

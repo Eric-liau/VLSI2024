@@ -53,14 +53,14 @@ module DRAM_wrapper (
     logic [7:0] AWID_reg, ARID_reg;
     logic [`AXI_DATA_BITS-1:0] RDATA_reg, WDATA_reg;
 
-    parameter	idle = 3'd0,
-				act = 3'd1,
-				r_data = 3'd2,
-            	w_data = 3'd3,
-                w_resp = 3'd4,
-                prec = 3'd5,
-                overflow_prec = 3'd6,
-                overflow_act = 3'd7;
+    localparam[2:0]	    idle = 3'd0,
+				        act = 3'd1,
+				        r_data = 3'd2,
+            	        w_data = 3'd3,
+                        w_resp = 3'd4,
+                        prec = 3'd5,
+                        overflow_prec = 3'd6,
+                        overflow_act = 3'd7;
 
     always_ff @( posedge clk, posedge rst ) begin
         if(rst)
@@ -167,6 +167,8 @@ module DRAM_wrapper (
                         n_state = w_data;
                     else if(ARVALID_reg)
                         n_state = r_data;
+                    else 
+                        n_state = act;
                 end
                 else
                     n_state = act;
@@ -211,6 +213,7 @@ module DRAM_wrapper (
                 else
                     n_state = overflow_prec;
             end
+            default : n_state = idle;
         endcase
     end
 
